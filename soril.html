@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  
+<style>
+  body {
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    margin: 0;
+  }
+
+  .kart {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 0 0 30px;
+    color: #1a2b4a;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 20px;
+    border: 2px solid #d6e0ec;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+  }
+
+  #hariu {
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+  }
+
+
+.zov {
+    color: #16a34a;
+  }
+
+  .buruu {
+    color: #dc2626;
+  }
+
+</style>
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Сорил</title>
+  </head>
+  <body>
+
+    <h1 id="asuult"></h1>
+    <div id="songoltuud"></div>
+    <p id="hariu"></p>
+
+    <script>
+var bodloguud = [
+  { asuult: "7 × 8 = ?",  songoltuud: [54, 56, 63], zov: 56 },
+  { asuult: "12 + 19 = ?", songoltuud: [31, 21, 29], zov: 31 },
+  { asuult: "45 ÷ 9 = ?",  songoltuud: [4, 5, 6],    zov: 5  },
+  { asuult: "100 − 37 = ?", songoltuud: [63, 67, 73], zov: 63 },
+  { asuult: "9 × 9 = ?",   songoltuud: [72, 81, 91], zov: 81 }
+];
+
+      var odooBodlogo = 0;
+      var onoo = 0;
+
+      function haruul() {
+        var b = bodloguud[odooBodlogo];
+        document.getElementById("asuult").textContent = b.asuult;
+        document.getElementById("hariu").textContent = "";
+
+        var talbar = document.getElementById("songoltuud");
+        talbar.innerHTML = "";
+
+        for (var i = 0; i < b.songoltuud.length; i++) {
+          var tovch = document.createElement("button");
+          tovch.textContent = b.songoltuud[i];
+          tovch.onclick = shalgah(b.songoltuud[i], b.zov);
+          talbar.appendChild(tovch);
+        }
+      }
+
+      function shalgah(songoson, zov) {
+        return function () {
+          if (songoson === zov) {
+            onoo = onoo + 1;
+            odooBodlogo = odooBodlogo + 1;
+            if (odooBodlogo < bodloguud.length) {
+              haruul();
+            } else {
+              document.getElementById("asuult").textContent = "Дууслаа!";
+              document.getElementById("songoltuud").innerHTML = "";
+             document.getElementById("hariu").className = "zov";
+ document.getElementById("hariu").textContent =
+                "Таны оноо: " + onoo + " / " + bodloguud.length;
+            }
+          } else {
+   document.getElementById("hariu").className = "buruu";         
+document.getElementById("hariu").textContent = "Буруу, дахин бод.";
+          }
+        };
+      }
+
+      haruul();
+    </script>
+
+  </body>
+</html>
