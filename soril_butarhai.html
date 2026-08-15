@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Энгийн бутархай — Сорил</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
       body {
         font-family: -apple-system, "Segoe UI", sans-serif;
@@ -123,34 +125,34 @@
     <script>
       var bodloguud = [
         {
-          asuult: "1/2 + 1/4 = ?",
-          songoltuud: ["2/6", "3/4", "1/6"],
-          zov: "3/4",
-          bodolt: "Хуваарийг тэнцүүлнэ: 1/2 = 2/4. Тэгэхээр 2/4 + 1/4 = 3/4."
+          asuult: "\\( \\frac{1}{2} + \\frac{1}{4} = ? \\)",
+          songoltuud: ["\\( \\frac{2}{6} \\)", "\\( \\frac{3}{4} \\)", "\\( \\frac{1}{6} \\)"],
+          zov: "\\( \\frac{3}{4} \\)",
+          bodolt: "Хуваарийг тэнцүүлнэ: \\( \\frac{1}{2} = \\frac{2}{4} \\). Тэгэхээр \\( \\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4} \\)."
         },
         {
-          asuult: "3/5 − 1/5 = ?",
-          songoltuud: ["2/5", "2/10", "4/5"],
-          zov: "2/5",
-          bodolt: "Хуваарь ижил тул хүртвэрийг хасна: 3 − 1 = 2. Хариу: 2/5."
+          asuult: "\\( \\frac{3}{5} - \\frac{1}{5} = ? \\)",
+          songoltuud: ["\\( \\frac{2}{5} \\)", "\\( \\frac{2}{10} \\)", "\\( \\frac{4}{5} \\)"],
+          zov: "\\( \\frac{2}{5} \\)",
+          bodolt: "Хуваарь ижил тул хүртвэрийг хасна: \\( 3 - 1 = 2 \\). Хариу: \\( \\frac{2}{5} \\)."
         },
         {
-          asuult: "2/3 × 3/4 = ?",
-          songoltuud: ["6/7", "1/2", "5/12"],
-          zov: "1/2",
-          bodolt: "Хүртвэрийг хооронд нь, хуваарийг хооронд нь үржүүлнэ: (2×3)/(3×4) = 6/12 = 1/2."
+          asuult: "\\( \\frac{2}{3} \\times \\frac{3}{4} = ? \\)",
+          songoltuud: ["\\( \\frac{6}{7} \\)", "\\( \\frac{1}{2} \\)", "\\( \\frac{5}{12} \\)"],
+          zov: "\\( \\frac{1}{2} \\)",
+          bodolt: "Хүртвэр, хуваарийг тус тусад нь үржүүлнэ: \\( \\frac{2 \\times 3}{3 \\times 4} = \\frac{6}{12} = \\frac{1}{2} \\)."
         },
         {
-          asuult: "1/2 ÷ 1/4 = ?",
-          songoltuud: ["1/8", "2", "1/2"],
-          zov: "2",
-          bodolt: "Хуваахдаа урвуулж үржүүлнэ: 1/2 × 4/1 = 4/2 = 2."
+          asuult: "\\( \\frac{1}{2} \\div \\frac{1}{4} = ? \\)",
+          songoltuud: ["\\( \\frac{1}{8} \\)", "\\( 2 \\)", "\\( \\frac{1}{2} \\)"],
+          zov: "\\( 2 \\)",
+          bodolt: "Хуваахдаа урвуулж үржүүлнэ: \\( \\frac{1}{2} \\times \\frac{4}{1} = \\frac{4}{2} = 2 \\)."
         },
         {
-          asuult: "Аль нь 6/8-тай тэнцүү вэ?",
-          songoltuud: ["3/4", "2/3", "4/6"],
-          zov: "3/4",
-          bodolt: "6/8-ыг 2-т хураана: 6÷2 = 3, 8÷2 = 4. Тэгэхээр 6/8 = 3/4."
+          asuult: "Аль нь \\( \\frac{6}{8} \\)-тай тэнцүү вэ?",
+          songoltuud: ["\\( \\frac{3}{4} \\)", "\\( \\frac{2}{3} \\)", "\\( \\frac{4}{6} \\)"],
+          zov: "\\( \\frac{3}{4} \\)",
+          bodolt: "2-т хураана: \\( \\frac{6 \\div 2}{8 \\div 2} = \\frac{3}{4} \\)."
         }
       ];
 
@@ -158,6 +160,10 @@
       var onoo = 0;
       var aldsan = [];
       var hariulsan = false;
+
+      function tomyoZur() {
+        if (window.MathJax && MathJax.typesetPromise) { MathJax.typesetPromise(); }
+      }
 
       function haruul() {
         var b = bodloguud[odoo];
@@ -176,9 +182,12 @@
           var tovch = document.createElement("button");
           tovch.className = "songolt";
           tovch.textContent = b.songoltuud[i];
+          tovch.setAttribute("data-hariu", b.songoltuud[i]);
           tovch.onclick = shalgah(b.songoltuud[i], b, tovch);
           talbar.appendChild(tovch);
         }
+
+        tomyoZur();
       }
 
       function shalgah(songoson, b, tovch) {
@@ -188,7 +197,7 @@
 
           var buhTovch = document.getElementsByClassName("songolt");
           for (var i = 0; i < buhTovch.length; i++) {
-            if (buhTovch[i].textContent === String(b.zov)) {
+            if (buhTovch[i].getAttribute("data-hariu") === String(b.zov)) {
               buhTovch[i].className = "songolt zov-haruulah";
             }
           }
@@ -206,6 +215,8 @@
           document.getElementById("toolur").textContent =
             "Бодлого " + (odoo + 1) + " / " + bodloguud.length + "  ·  Оноо: " + onoo;
           document.getElementById("daraah").style.display = "inline-block";
+
+          tomyoZur();
         };
       }
 
@@ -240,6 +251,8 @@
         } else {
           talbar.innerHTML = "<p style='color:#16a34a;font-weight:bold;font-size:20px'>🎉 Бүгдийг зөв бодлоо!</p>";
         }
+
+        tomyoZur();
       }
 
       haruul();
