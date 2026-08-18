@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Аравтын бутархай — Сорил 2</title>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .butsah {
+        align-self: flex-start;
+        padding: 18px 30px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      .kart {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        max-width: 480px;
+        padding: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .toolur {
+        color: #5a6b85;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 26px;
+        color: #0f2b46;
+        margin: 0 0 24px;
+      }
+
+      button.songolt {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        margin: 10px 0;
+        font-size: 19px;
+        font-family: inherit;
+        border: 2px solid #d6e0ec;
+        border-radius: 10px;
+        background: white;
+        color: #0f2b46;
+        cursor: pointer;
+      }
+
+      button.songolt:hover {
+        border-color: #2563eb;
+      }
+
+      button.songolt.zov-haruulah {
+        background: #dcfce7;
+        border-color: #16a34a;
+        color: #14532d;
+      }
+
+      button.songolt.buruu-haruulah {
+        background: #fee2e2;
+        border-color: #dc2626;
+        color: #7f1d1d;
+      }
+
+      #bodolt {
+        display: none;
+        margin-top: 18px;
+        padding: 16px;
+        border-radius: 10px;
+        background: #eff6ff;
+        color: #0f2b46;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      #daraah {
+        display: none;
+        margin-top: 18px;
+        padding: 13px 36px;
+        font-size: 17px;
+        font-family: inherit;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+
+      .dun-mur {
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 1px solid #eef2f7;
+        color: #0f2b46;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="butsah" href="aravt-jagsaalt.html">← Сорилууд руу буцах</a>
+
+    <div class="kart">
+      <p class="toolur" id="toolur"></p>
+      <h1 id="asuult"></h1>
+      <div id="songoltuud"></div>
+      <div id="bodolt"></div>
+      <button id="daraah" onclick="daraagiinh()">Дараах →</button>
+    </div>
+
+    <script>
+      var bodloguud = [
+        {
+          asuult: "\\( 0.7 \\)-ийг энгийн бутархайгаар илэрхийл.",
+          songoltuud: ["\\( \\frac{7}{10} \\)", "\\( \\frac{7}{100} \\)", "\\( \\frac{1}{7} \\)"],
+          zov: "\\( \\frac{7}{10} \\)",
+          bodolt: "Таслалын ард 1 орон тул хуваарь 10: \\( 0.7 = \\frac{7}{10} \\)."
+        },
+        {
+          asuult: "\\( 0.23 \\)-ыг энгийн бутархайгаар илэрхийл.",
+          songoltuud: ["\\( \\frac{23}{100} \\)", "\\( \\frac{23}{10} \\)", "\\( \\frac{2.3}{10} \\)"],
+          zov: "\\( \\frac{23}{100} \\)",
+          bodolt: "Таслалын ард 2 орон тул хуваарь 100: \\( \\frac{23}{100} \\)."
+        },
+        {
+          asuult: "\\( 2\\frac{4}{25} \\)-ыг аравтын бутархайгаар илэрхийл.",
+          songoltuud: ["\\( 2.16 \\)", "\\( 2.4 \\)", "\\( 2.425 \\)"],
+          zov: "\\( 2.16 \\)",
+          bodolt: "\\( \\frac{4}{25} = \\frac{16}{100} = 0.16 \\). Тэгэхээр \\( 2.16 \\)."
+        },
+        {
+          asuult: "\\( \\frac{7}{50} \\)-ийг аравтын бутархайгаар илэрхийл.",
+          songoltuud: ["\\( 0.14 \\)", "\\( 0.7 \\)", "\\( 0.075 \\)"],
+          zov: "\\( 0.14 \\)",
+          bodolt: "\\( \\frac{7}{50} = \\frac{14}{100} = 0.14 \\)."
+        },
+        {
+          asuult: "\\( \\frac{3}{125} \\)-ыг аравтын бутархайгаар илэрхийл.",
+          songoltuud: ["\\( 0.024 \\)", "\\( 0.24 \\)", "\\( 0.0375 \\)"],
+          zov: "\\( 0.024 \\)",
+          bodolt: "\\( \\frac{3}{125} = \\frac{24}{1000} = 0.024 \\)."
+        }
+      ];
+
+      var odoo = 0;
+      var onoo = 0;
+      var aldsan = [];
+      var hariulsan = false;
+
+      function tomyoZur() {
+        if (window.MathJax && MathJax.typesetPromise) { MathJax.typesetPromise(); }
+      }
+
+      function haruul() {
+        var b = bodloguud[odoo];
+        hariulsan = false;
+
+        document.getElementById("toolur").textContent =
+          "Бодлого " + (odoo + 1) + " / " + bodloguud.length + "  ·  Оноо: " + onoo;
+        document.getElementById("asuult").textContent = b.asuult;
+        document.getElementById("bodolt").style.display = "none";
+        document.getElementById("daraah").style.display = "none";
+
+        var talbar = document.getElementById("songoltuud");
+        talbar.innerHTML = "";
+
+        for (var i = 0; i < b.songoltuud.length; i++) {
+          var tovch = document.createElement("button");
+          tovch.className = "songolt";
+          tovch.textContent = b.songoltuud[i];
+          tovch.setAttribute("data-hariu", b.songoltuud[i]);
+          tovch.onclick = shalgah(b.songoltuud[i], b, tovch);
+          talbar.appendChild(tovch);
+        }
+
+        tomyoZur();
+      }
+
+      function shalgah(songoson, b, tovch) {
+        return function () {
+          if (hariulsan) return;
+          hariulsan = true;
+
+          var buhTovch = document.getElementsByClassName("songolt");
+          for (var i = 0; i < buhTovch.length; i++) {
+            if (buhTovch[i].getAttribute("data-hariu") === String(b.zov)) {
+              buhTovch[i].className = "songolt zov-haruulah";
+            }
+          }
+
+          if (songoson === b.zov) {
+            onoo = onoo + 1;
+          } else {
+            tovch.className = "songolt buruu-haruulah";
+            aldsan.push(b);
+            var bodoltTalbar = document.getElementById("bodolt");
+            bodoltTalbar.innerHTML = "<b>Бодолт:</b> " + b.bodolt;
+            bodoltTalbar.style.display = "block";
+          }
+
+          document.getElementById("toolur").textContent =
+            "Бодлого " + (odoo + 1) + " / " + bodloguud.length + "  ·  Оноо: " + onoo;
+          document.getElementById("daraah").style.display = "inline-block";
+
+          tomyoZur();
+        };
+      }
+
+      function daraagiinh() {
+        odoo = odoo + 1;
+        if (odoo < bodloguud.length) {
+          haruul();
+        } else {
+          duusgah();
+        }
+      }
+
+      function duusgah() {
+        document.getElementById("toolur").textContent = "Сорил дууслаа";
+        document.getElementById("asuult").textContent =
+          "Таны оноо: " + onoo + " / " + bodloguud.length;
+        document.getElementById("bodolt").style.display = "none";
+        document.getElementById("daraah").style.display = "none";
+
+        var talbar = document.getElementById("songoltuud");
+        talbar.innerHTML = "";
+
+        if (aldsan.length > 0) {
+          for (var i = 0; i < aldsan.length; i++) {
+            var mur = document.createElement("div");
+            mur.className = "dun-mur";
+            mur.innerHTML =
+              "❌ <b>" + aldsan[i].asuult + "</b><br>Зөв хариу: " +
+              aldsan[i].zov + "<br><small>" + aldsan[i].bodolt + "</small>";
+            talbar.appendChild(mur);
+          }
+        } else {
+          talbar.innerHTML = "<p style='color:#16a34a;font-weight:bold;font-size:20px'>🎉 Бүгдийг зөв бодлоо!</p>";
+        }
+
+        tomyoZur();
+      }
+
+      haruul();
+    </script>
+  </body>
+</html>
