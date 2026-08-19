@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тэгш өнцөгт гурвалжин — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga {
+        position: relative;
+        z-index: 1;
+      }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 0 20px;
+      }
+
+      .tailbar-deed {
+        color: #b8c7d9;
+        font-size: 14px;
+        max-width: 520px;
+        margin: 6px auto 0;
+        padding: 0 20px;
+      }
+
+      h2.buleg {
+        font-size: 19px;
+        color: #f5b942;
+        margin: 34px 0 4px;
+      }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar {
+        font-size: 14px;
+        margin-top: 8px;
+        opacity: 0.7;
+      }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+      .ongo6 { background: #fff0e6; }
+      .ongo7 { background: #e6f7f7; }
+
+      .huudas-tögsgöl {
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Тэгш өнцөгт гурвалжин</h1>
+      <p class="tailbar-deed">
+        Тэмдэглэгээ: \( a, b \) — катетууд, \( c \) — гипотенуз,
+        \( h \) — тэгш өнцгийн оройгоос буулгасан өндөр,
+        \( a_c, b_c \) — катетуудын гипотенуз дээрх проекцууд.
+      </p>
+
+      <h2 class="buleg">Пифагорын теорем</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Пифагорын теорем</div>
+        \( c^2 = a^2 + b^2 \)
+        <div class="tailbar">Гипотенузын квадрат нь катетуудын квадратын нийлбэртэй тэнцүү</div>
+      </div>
+
+      <h2 class="buleg">Өнцгийн харьцаанууд</h2>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Синус, косинус</div>
+        \( \sin \alpha = \dfrac{a}{c}, \qquad \cos \alpha = \dfrac{b}{c} \)
+        <div class="tailbar">Синус = эсрэг катет / гипотенуз · Косинус = хажуу катет / гипотенуз</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Тангенс, котангенс</div>
+        \( \tan \alpha = \dfrac{a}{b}, \qquad \cot \alpha = \dfrac{b}{a} \)
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">30°, 45°, 60°-ын утгууд</div>
+        \( \sin 30° = \dfrac{1}{2}, \quad \sin 45° = \dfrac{\sqrt{2}}{2}, \quad \sin 60° = \dfrac{\sqrt{3}}{2} \)
+        <div class="tailbar">\( \cos 30° = \dfrac{\sqrt{3}}{2}, \quad \cos 45° = \dfrac{\sqrt{2}}{2}, \quad \cos 60° = \dfrac{1}{2} \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">30°-ын эсрэг катет</div>
+        <div class="tailbar">30°-ын өнцгийн эсрэг орших катет нь гипотенузын хагастай тэнцүү: \( a_{30°} = \dfrac{c}{2} \)</div>
+      </div>
+
+      <h2 class="buleg">Талбай, периметр</h2>
+
+      <div class="tomyo-kart ongo6">
+        <div class="ner">Талбай</div>
+        \( S = \dfrac{a \cdot b}{2} = \dfrac{c \cdot h}{2} \)
+      </div>
+
+      <div class="tomyo-kart ongo7">
+        <div class="ner">Периметр</div>
+        \( P = a + b + c \)
+      </div>
+
+      <h2 class="buleg">Тойргийн радиусууд</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Багтаасан тойргийн радиус</div>
+        \( R = \dfrac{c}{2} \)
+        <div class="tailbar">Багтаасан тойргийн төв нь гипотенузын дунд цэг — тэгш өнцөгт гурвалжны онцгой чанар</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Багтсан тойргийн радиус</div>
+        \( r = \dfrac{a + b - c}{2} \)
+        <div class="tailbar">Мөн: \( r = \dfrac{S}{p} \), энд \( p = \dfrac{P}{2} \) — хагас периметр</div>
+      </div>
+
+      <h2 class="buleg">Өндрийн чанарууд</h2>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Өндрийн квадрат</div>
+        \( h^2 = a_c \cdot b_c \)
+        <div class="tailbar">Тэгш өнцгийн оройгоос буулгасан өндрийн квадрат нь катетуудын проекцуудын үржвэртэй тэнцүү</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Катетын квадрат</div>
+        \( a^2 = c \cdot a_c, \qquad b^2 = c \cdot b_c \)
+        <div class="tailbar">Катетын квадрат нь гипотенуз ба өөрийн проекцын үржвэртэй тэнцүү</div>
+      </div>
+
+      <div class="tomyo-kart ongo5 huudas-tögsgöl">
+        <div class="ner">Өндрийг олох өөр томьёо</div>
+        \( h = \dfrac{a \cdot b}{c} \)
+      </div>
+    </div>
+  </body>
+</html>
