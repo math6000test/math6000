@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Синус, косинусын теорем — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga { position: relative; z-index: 1; }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 { font-size: 24px; margin-top: 20px; padding: 0 20px; }
+
+      h2.buleg { font-size: 19px; color: #f5b942; margin: 34px 0 4px; }
+
+      .zurag-kart {
+        background: white;
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 16px auto;
+        padding: 18px;
+      }
+
+      .zurag-kart svg { max-width: 100%; height: auto; }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar { font-size: 14px; margin-top: 8px; opacity: 0.7; }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+
+      .huudas-tögsgöl { margin-bottom: 60px; }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Синус, косинусын теорем</h1>
+
+      <h2 class="buleg">Синусын теорем</h2>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <!-- багтаасан тойрог: төв (235,145), R=118 -->
+          <circle cx="235" cy="145" r="118" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="5,5"/>
+          <!-- гурвалжин тойрог дээрх гурван цэгээр: A(160,54), B(348,110), C(150,230) -->
+          <polygon points="160,54 348,110 150,230" fill="#e8f4fd" stroke="#0f2b46" stroke-width="2.5"/>
+          <!-- оройн үсгүүд -->
+          <text x="146" y="44" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="360" y="112" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="130" y="246" font-size="17" font-weight="bold" fill="#0f2b46">C</text>
+          <!-- талууд: a=BC (A-ийн эсрэг), b=AC, c=AB -->
+          <text x="256" y="186" font-size="16" font-style="italic" fill="#2563eb">a</text>
+          <text x="136" y="145" font-size="16" font-style="italic" fill="#2563eb">b</text>
+          <text x="252" y="72" font-size="16" font-style="italic" fill="#2563eb">c</text>
+          <!-- өнцгүүд: орой бүрийн дотор -->
+          <text x="166" y="80" font-size="14" fill="#dc2626">α</text>
+          <text x="318" y="116" font-size="14" fill="#dc2626">β</text>
+          <text x="164" y="216" font-size="14" fill="#dc2626">γ</text>
+          <!-- R радиус -->
+          <line x1="235" y1="145" x2="348" y2="110" stroke="#2563eb" stroke-width="1.4"/>
+          <circle cx="235" cy="145" r="3" fill="#2563eb"/>
+          <text x="286" y="122" font-size="14" font-style="italic" fill="#2563eb">R</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          a, b, c — өнцгийн эсрэг талууд · R — багтаасан тойргийн радиус
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Синусын теорем</div>
+        \( \dfrac{a}{\sin \alpha} = \dfrac{b}{\sin \beta} = \dfrac{c}{\sin \gamma} = 2R \)
+        <div class="tailbar">Тал бүр эсрэг өнцгийнхөө синуст харьцуулахад тэнцүү бөгөөд багтаасан тойргийн диаметртэй тэнцэнэ</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Мөрдлөгөө</div>
+        \( a = 2R \sin \alpha, \qquad R = \dfrac{a}{2 \sin \alpha} \)
+        <div class="tailbar">Их өнцгийн эсрэг их тал байрладаг</div>
+      </div>
+
+      <h2 class="buleg">Косинусын теорем</h2>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 250" xmlns="http://www.w3.org/2000/svg">
+          <!-- гурвалжин: A(110,60), B(420,200), C(60,200) -->
+          <polygon points="110,60 420,200 60,200" fill="#e6f9ee" stroke="#0f2b46" stroke-width="2.5"/>
+          <!-- оройн үсгүүд -->
+          <text x="98" y="50" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="432" y="216" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="40" y="216" font-size="17" font-weight="bold" fill="#0f2b46">C</text>
+          <!-- талууд -->
+          <text x="238" y="228" font-size="16" font-style="italic" fill="#16a34a">a</text>
+          <text x="66" y="130" font-size="16" font-style="italic" fill="#16a34a">b</text>
+          <text x="272" y="118" font-size="16" font-style="italic" fill="#16a34a">c</text>
+          <!-- γ өнцөг C оройд, нумаар тодруулав -->
+          <path d="M 96 200 A 36 36 0 0 0 88 178" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+          <text x="100" y="188" font-size="14" fill="#dc2626">γ</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          c талыг олоход a, b хоёр тал ба тэдгээрийн хоорондох γ өнцөг хэрэгтэй
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Косинусын теорем</div>
+        \( c^2 = a^2 + b^2 - 2ab \cos \gamma \)
+        <div class="tailbar">Тал бүрд бичиж болно: \( a^2 = b^2 + c^2 - 2bc \cos \alpha \), \( \; b^2 = a^2 + c^2 - 2ac \cos \beta \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Өнцгийг олох хэлбэр</div>
+        \( \cos \gamma = \dfrac{a^2 + b^2 - c^2}{2ab} \)
+      </div>
+
+      <div class="tomyo-kart ongo5 huudas-tögsgöl">
+        <div class="ner">Пифагортой холбоо</div>
+        <div class="tailbar">\( \gamma = 90° \) үед \( \cos 90° = 0 \) тул \( c^2 = a^2 + b^2 \) — косинусын теорем нь Пифагорын теоремын ерөнхийлөл юм. \( \gamma < 90° \) бол \( c^2 < a^2+b^2 \), \( \gamma > 90° \) бол \( c^2 > a^2+b^2 \).</div>
+      </div>
+    </div>
+  </body>
+</html>
