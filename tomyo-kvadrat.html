@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Квадрат тэгшитгэл, Виетийн теорем — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga {
+        position: relative;
+        z-index: 1;
+      }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 0 20px;
+      }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar {
+        font-size: 14px;
+        margin-top: 8px;
+        opacity: 0.7;
+      }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+      .ongo6 { background: #fff0e6; }
+      .ongo7 { background: #e6f7f7; }
+
+      .huudas-tögsgöl {
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Квадрат тэгшитгэл, Виетийн теорем</h1>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Квадрат тэгшитгэлийн ерөнхий хэлбэр</div>
+        \( ax^2 + bx + c = 0, \qquad a \neq 0 \)
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Дискриминант</div>
+        \( D = b^2 - 4ac \)
+        <div class="tailbar">
+          \( D > 0 \) — хоёр өөр шийд · \( D = 0 \) — давхар нэг шийд · \( D < 0 \) — бодит шийдгүй
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Шийдийн томьёо</div>
+        \( x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a} \)
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Виетийн теорем</div>
+        \( x_1 + x_2 = -\dfrac{b}{a}, \qquad x_1 \cdot x_2 = \dfrac{c}{a} \)
+        <div class="tailbar">
+          \( a = 1 \) үед: \( x_1 + x_2 = -b, \quad x_1 x_2 = c \)
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Үржигдэхүүнд задлах</div>
+        \( ax^2 + bx + c = a(x - x_1)(x - x_2) \)
+      </div>
+
+      <div class="tomyo-kart ongo6">
+        <div class="ner">b нь тэгш тооны үеийн товч томьёо</div>
+        \( x_{1,2} = \dfrac{-k \pm \sqrt{k^2 - ac}}{a}, \qquad k = \dfrac{b}{2} \)
+      </div>
+
+      <div class="tomyo-kart ongo7 huudas-tögsgöl">
+        <div class="ner">Параболын орой</div>
+        \( x_o = -\dfrac{b}{2a}, \qquad y_o = -\dfrac{D}{4a} \)
+      </div>
+    </div>
+  </body>
+</html>
