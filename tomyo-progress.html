@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Прогресс — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga {
+        position: relative;
+        z-index: 1;
+      }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 0 20px;
+      }
+
+      h2.buleg {
+        font-size: 19px;
+        color: #f5b942;
+        margin: 34px 0 4px;
+      }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar {
+        font-size: 14px;
+        margin-top: 8px;
+        opacity: 0.7;
+      }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+      .ongo6 { background: #fff0e6; }
+      .ongo7 { background: #e6f7f7; }
+
+      .huudas-tögsgöl {
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Прогресс</h1>
+
+      <h2 class="buleg">Арифметик прогресс</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Тодорхойлолт, ялгавар</div>
+        \( a_{n+1} = a_n + d \)
+        <div class="tailbar">\( d \) — ялгавар (зэрэглэл)</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Ерөнхий гишүүний томьёо</div>
+        \( a_n = a_1 + (n-1)d \)
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Эхний n гишүүний нийлбэр</div>
+        \( S_n = \dfrac{a_1 + a_n}{2} \cdot n = \dfrac{2a_1 + (n-1)d}{2} \cdot n \)
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Дараалсан 3 гишүүний чанар</div>
+        \( a_{n} = \dfrac{a_{n-1} + a_{n+1}}{2} \)
+        <div class="tailbar">Дундах гишүүн нь хоёр хөршийнхөө арифметик дундаж</div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Дараалсан 4 гишүүний чанар</div>
+        \( a_1 + a_4 = a_2 + a_3 \)
+        <div class="tailbar">Ерөнхийд нь: захаас тэнцүү зайтай гишүүдийн нийлбэр тэнцүү — \( a_k + a_{n-k+1} = a_1 + a_n \)</div>
+      </div>
+
+      <h2 class="buleg">Геометр прогресс</h2>
+
+      <div class="tomyo-kart ongo6">
+        <div class="ner">Тодорхойлолт, хуваарь</div>
+        \( b_{n+1} = b_n \cdot q \)
+        <div class="tailbar">\( q \) — хуваарь, \( b_1 \neq 0, \; q \neq 0 \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo7">
+        <div class="ner">Ерөнхий гишүүний томьёо</div>
+        \( b_n = b_1 \cdot q^{n-1} \)
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Эхний n гишүүний нийлбэр</div>
+        \( S_n = \dfrac{b_1(q^n - 1)}{q - 1}, \qquad q \neq 1 \)
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Дараалсан 3 гишүүний чанар</div>
+        \( b_n^2 = b_{n-1} \cdot b_{n+1} \)
+        <div class="tailbar">Дундах гишүүн нь хоёр хөршийнхөө геометр дундаж: \( |b_n| = \sqrt{b_{n-1} \cdot b_{n+1}} \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Дараалсан 4 гишүүний чанар</div>
+        \( b_1 \cdot b_4 = b_2 \cdot b_3 \)
+        <div class="tailbar">Ерөнхийд нь: захаас тэнцүү зайтай гишүүдийн үржвэр тэнцүү — \( b_k \cdot b_{n-k+1} = b_1 \cdot b_n \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Төгсгөлгүй буурах геометр прогрессийн нийлбэр</div>
+        \( S = \dfrac{b_1}{1 - q}, \qquad |q| < 1 \)
+      </div>
+
+      <div class="tomyo-kart ongo5 huudas-tögsgöl">
+        <div class="ner">Төгсгөлгүй буурах прогрессийн чанар</div>
+        <div class="tailbar">\( |q| < 1 \) үед гишүүд тэг рүү тэмүүлж, нийлбэр төгсгөлөг тоонд дөхнө. Жишээ: \( 1 + \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \ldots = \dfrac{1}{1 - \frac{1}{2}} = 2 \)</div>
+      </div>
+    </div>
+  </body>
+</html>
