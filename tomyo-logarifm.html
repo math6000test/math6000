@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Илтгэгч, логарифм — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga {
+        position: relative;
+        z-index: 1;
+      }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-top: 20px;
+        padding: 0 20px;
+      }
+
+      h2.buleg {
+        font-size: 19px;
+        color: #f5b942;
+        margin: 34px 0 4px;
+      }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar {
+        font-size: 14px;
+        margin-top: 8px;
+        opacity: 0.7;
+      }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+      .ongo6 { background: #fff0e6; }
+      .ongo7 { background: #e6f7f7; }
+
+      .huudas-tögsgöl {
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Илтгэгч, логарифм</h1>
+
+      <h2 class="buleg">Илтгэгчийн чанарууд</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Үндсэн чанарууд</div>
+        \( a^x \cdot a^y = a^{x+y}, \qquad \dfrac{a^x}{a^y} = a^{x-y} \)
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Зэргийн зэрэг, үржвэрийн зэрэг</div>
+        \( (a^x)^y = a^{xy}, \qquad (ab)^x = a^x b^x \)
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Илтгэгч тэгшитгэлийн үндсэн зарчим</div>
+        \( a^x = a^y \; \Rightarrow \; x = y \)
+        <div class="tailbar">\( a > 0, \; a \neq 1 \) үед суурь ижил бол илтгэгчүүд тэнцүү</div>
+      </div>
+
+      <h2 class="buleg">Логарифмын тодорхойлолт</h2>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Тодорхойлолт</div>
+        \( \log_a b = c \; \Leftrightarrow \; a^c = b \)
+        <div class="tailbar">\( a > 0, \; a \neq 1, \; b > 0 \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Үндсэн адилтгал</div>
+        \( a^{\log_a b} = b \)
+      </div>
+
+      <div class="tomyo-kart ongo6">
+        <div class="ner">Тусгай утгууд</div>
+        \( \log_a 1 = 0, \qquad \log_a a = 1 \)
+      </div>
+
+      <h2 class="buleg">Логарифмын чанарууд</h2>
+
+      <div class="tomyo-kart ongo7">
+        <div class="ner">Үржвэрийн логарифм</div>
+        \( \log_a (xy) = \log_a x + \log_a y \)
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Ногдворын логарифм</div>
+        \( \log_a \dfrac{x}{y} = \log_a x - \log_a y \)
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Зэргийн логарифм</div>
+        \( \log_a x^k = k \log_a x \)
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Суурийн зэрэг</div>
+        \( \log_{a^m} x = \dfrac{1}{m} \log_a x \)
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Суурь солих томьёо</div>
+        \( \log_a b = \dfrac{\log_c b}{\log_c a} \)
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Урвуулах чанар</div>
+        \( \log_a b = \dfrac{1}{\log_b a} \)
+      </div>
+
+      <div class="tomyo-kart ongo6 huudas-tögsgöl">
+        <div class="ner">Тэмдэглэгээнүүд</div>
+        \( \lg x = \log_{10} x, \qquad \ln x = \log_e x \)
+        <div class="tailbar">lg — аравтын логарифм, ln — натурал логарифм (\( e \approx 2.718 \))</div>
+      </div>
+    </div>
+  </body>
+</html>
