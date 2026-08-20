@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Өндөр, ортоцентр — Математикийн 6000 тест</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+       <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
       body {
         font-family: -apple-system, "Segoe UI", sans-serif;
@@ -89,32 +89,22 @@
 
       <div class="zurag-kart">
         <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
-          <!-- хурц өнцөгт гурвалжин: A(220,40), B(70,240), C(420,240) -->
           <polygon points="220,40 70,240 420,240" fill="#e8f4fd" stroke="#0f2b46" stroke-width="2.5"/>
 
-          <!-- өндөр A-аас: суурь (220,240), босоо -->
           <line x1="220" y1="40" x2="220" y2="240" stroke="#dc2626" stroke-width="1.7"/>
-          <!-- өндөр B-ээс AC руу: AC чиглэл (200,200)→нэгж; проекцоор суурь ≈ (302,122) -->
-          <line x1="70" y1="240" x2="302" y2="122" stroke="#dc2626" stroke-width="1.7"/>
-          <!-- өндөр C-ээс AB руу: AB чиглэл (-150,200); суурь ≈ (131,159) -->
-          <line x1="420" y1="240" x2="131" y2="159" stroke="#dc2626" stroke-width="1.7"/>
+          <line x1="70" y1="240" x2="245" y2="65" stroke="#dc2626" stroke-width="1.7"/>
+          <line x1="420" y1="240" x2="196" y2="72" stroke="#dc2626" stroke-width="1.7"/>
 
-          <!-- суурийн цэгүүд -->
           <circle cx="220" cy="240" r="3" fill="#dc2626"/>
-          <circle cx="302" cy="122" r="3" fill="#dc2626"/>
-          <circle cx="131" cy="159" r="3" fill="#dc2626"/>
+          <circle cx="245" cy="65" r="3" fill="#dc2626"/>
+          <circle cx="196" cy="72" r="3" fill="#dc2626"/>
 
-          <!-- ортоцентр H: A-ийн өндөр (x=220) дээр, ≈(220,184) -->
-          <circle cx="220" cy="184" r="5" fill="#f59e0b"/>
-          <text x="230" y="180" font-size="15" font-weight="bold" fill="#b45309">H</text>
+          <circle cx="220" cy="90" r="5" fill="#f59e0b"/>
+          <text x="231" y="88" font-size="15" font-weight="bold" fill="#b45309">H</text>
 
-          <!-- оройн үсгүүд -->
           <text x="212" y="30" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
           <text x="48" y="254" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
           <text x="430" y="254" font-size="17" font-weight="bold" fill="#0f2b46">C</text>
-
-          <!-- AH хэрчмийн тэмдэглэгээ -->
-          <text x="228" y="120" font-size="13" font-style="italic" fill="#dc2626">AH</text>
         </svg>
         <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
           Гурван өндөр нэг цэгт (H — ортоцентр) огтлолцоно
@@ -135,6 +125,31 @@
 
       <h2 class="buleg">Ортоцентр хүртэлх зайнууд</h2>
 
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="220,40 70,240 420,240" fill="#e6f9ee" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <line x1="220" y1="90" x2="220" y2="240" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5,4"/>
+          <line x1="220" y1="40" x2="220" y2="90" stroke="#dc2626" stroke-width="3"/>
+          <circle cx="220" cy="90" r="5" fill="#f59e0b"/>
+          <text x="231" y="88" font-size="15" font-weight="bold" fill="#b45309">H</text>
+          <circle cx="220" cy="240" r="3" fill="#94a3b8"/>
+          <text x="228" y="258" font-size="13" font-style="italic" fill="#5a6b85">H&#8320;</text>
+
+          <path d="M 199 68 A 35 35 0 0 1 243 70" fill="none" stroke="#16a34a" stroke-width="1.6"/>
+          <text x="212" y="84" font-size="14" font-weight="bold" fill="#16a34a">α</text>
+
+          <text x="180" y="72" font-size="13" font-style="italic" fill="#dc2626">AH</text>
+
+          <text x="212" y="30" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="48" y="254" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="430" y="254" font-size="17" font-weight="bold" fill="#0f2b46">C</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          🔴 AH = 2R·cos α · тасархай хэсэг — H-ээс өндрийн суурь (H₀) хүртэл
+        </div>
+      </div>
+
       <div class="tomyo-kart ongo3">
         <div class="ner">Оройгоос ортоцентр хүртэлх зай</div>
         \( AH = 2R \cos \alpha \)
@@ -148,8 +163,8 @@
       </div>
 
       <div class="tomyo-kart ongo5 huudas-tögsgöl">
-        <div class="ner">Ортоцентрөөс тал хүртэлх зайн чанар</div>
-        <div class="tailbar">Ортоцентрөөс тал хүртэлх зай нь багтаасан тойргийн төвөөс тухайн талын <b>эсрэг орой</b> хүртэлх зайг 2-т хуваасантай холбоотой: \( OM_a = \dfrac{AH}{2} \), энд \( O \) — багтаасан тойргийн төв, \( M_a \) — BC талын дунд цэг.</div>
+        <div class="ner">Багтаасан тойргийн төвтэй холбоо</div>
+        <div class="tailbar">\( OM_a = \dfrac{AH}{2} \) — багтаасан тойргийн төвөөс (O) талын дунд цэг (M_a) хүртэлх зай нь эсрэг оройгоос ортоцентр хүртэлх зайн хагастай тэнцүү.</div>
       </div>
     </div>
   </body>
