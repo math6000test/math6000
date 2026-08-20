@@ -59,6 +59,7 @@
         text-align: left;
         font-size: 18px;
         color: #0f2b46;
+        overflow-x: auto;
       }
 
       .tomyo-kart .ner {
@@ -154,7 +155,7 @@
           <text x="150" y="140" font-size="14" font-weight="bold" fill="#0f2b46">S₃</text>
           <text x="326" y="140" font-size="14" font-weight="bold" fill="#0f2b46">S₄</text>
 
-          <text x="258" y="103" font-size="14" fill="#7c3aed">φ</text>
+          <text x="258" y="90" font-size="14" fill="#7c3aed">φ</text>
           <text x="196" y="96" font-size="14" font-style="italic" fill="#7c3aed">d₁</text>
           <text x="286" y="96" font-size="14" font-style="italic" fill="#7c3aed">d₂</text>
 
@@ -190,8 +191,12 @@
 
       <div class="tomyo-kart ongo3 huudas-tögsgöl">
         <div class="ner">Дөрвөн талаар нь (\( a > b \))</div>
-        \( S = \dfrac{a + b}{4(a - b)} \sqrt{(a - b + c + d)(-a + b + c + d)(a - b + c - d)(a - b - c + d)} \)
-        <div class="tailbar">Зөвхөн талууд нь өгөгдсөн, өндөр нь мэдэгдэхгүй үед хэрэглэнэ — Геронтой төстэй бүтэцтэй</div>
+        \( S = \dfrac{a + b}{4(a - b)} \cdot \sqrt{P} \)
+        <div style="font-size:16px; margin-top:12px; line-height:1.9;">
+          \( P = (a - b + c + d)\,(-a + b + c + d)\ \cdot \)<br>
+          \( \cdot\ (a - b + c - d)\,(a - b - c + d) \)
+        </div>
+        <div class="tailbar">Зөвхөн талууд нь өгөгдсөн, өндөр нь мэдэгдэхгүй үед хэрэглэнэ — Геронтой төстэй бүтэцтэй. \( P \) нь дөрвөн хаалтны үржвэр.</div>
       </div>
     </div>
   </body>
