@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ЭЕШ 2025— Бодолт-Математикийн 6000 тест</title>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #1e2530;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .butsah {
+        align-self: flex-start;
+        padding: 18px 30px;
+        color: #aab4c4;
+        text-decoration: none;
+      }
+
+      canvas {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+        max-width: 92%;
+        height: auto;
+      }
+
+      .guilgeh {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin: 20px 0 40px;
+        color: white;
+        font-size: 17px;
+      }
+
+      .guilgeh button {
+        font-size: 17px;
+        font-family: inherit;
+        padding: 12px 26px;
+        border: none;
+        border-radius: 10px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+
+      .guilgeh button:disabled {
+        background: #4a5568;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="butsah" href="eesh.html">← ЭЕШ бодлогууд руу буцах</a>
+
+    <canvas id="huudas"></canvas>
+
+    <div class="guilgeh">
+      <button id="umnuh" onclick="urgelj(-1)">← Өмнөх</button>
+      <span id="dugaar"></span>
+      <button id="daraah" onclick="urgelj(1)">Дараах →</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+      var pdfFile = "bodolt2025.pdf";
+      var pdf = null;
+      var odoo = 1;
+
+      pdfjsLib.getDocument(pdfFile).promise.then(function (d) {
+        pdf = d;
+        haruul();
+      });
+
+      function haruul() {
+        pdf.getPage(odoo).then(function (huudas) {
+          var canvas = document.getElementById("huudas");
+          var scale = 1.6;
+          var viewport = huudas.getViewport({ scale: scale });
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          huudas.render({
+            canvasContext: canvas.getContext("2d"),
+            viewport: viewport
+          });
+
+          document.getElementById("dugaar").textContent =
+            odoo + " / " + pdf.numPages;
+          document.getElementById("umnuh").disabled = (odoo === 1);
+          document.getElementById("daraah").disabled = (odoo === pdf.numPages);
+        });
+      }
+
+      function urgelj(chiglel) {
+        odoo = odoo + chiglel;
+        haruul();
+      }
+    </script>
+  </body>
+</html>
