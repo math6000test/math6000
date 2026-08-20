@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Параллелограмм — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga { position: relative; z-index: 1; }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 { font-size: 24px; margin-top: 20px; padding: 0 20px; }
+
+      h2.buleg { font-size: 19px; color: #f5b942; margin: 34px 0 4px; }
+
+      .zurag-kart {
+        background: white;
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 16px auto;
+        padding: 18px;
+      }
+
+      .zurag-kart svg { max-width: 100%; height: auto; }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+        overflow-x: auto;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar { font-size: 14px; margin-top: 8px; opacity: 0.7; }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+
+      .huudas-tögsgöl { margin-bottom: 60px; }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Параллелограмм</h1>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <!-- A(140,60) B(420,60) C(340,230) D(60,230) -->
+          <polygon points="140,60 420,60 340,230 60,230" fill="#e8f4fd" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <!-- өндөр -->
+          <line x1="140" y1="60" x2="140" y2="230" stroke="#dc2626" stroke-width="2"/>
+          <rect x="140" y="216" width="14" height="14" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+
+          <!-- өнцгүүд: D ба B дээрх тэнцүү өнцгүүд -->
+          <path d="M 95 230 A 35 35 0 0 0 75 198" fill="none" stroke="#7c3aed" stroke-width="1.8"/>
+          <path d="M 385 60 A 35 35 0 0 0 405 92" fill="none" stroke="#7c3aed" stroke-width="1.8"/>
+          <text x="80" y="216" font-size="14" fill="#7c3aed">α</text>
+          <text x="386" y="84" font-size="14" fill="#7c3aed">α</text>
+
+          <!-- талууд -->
+          <text x="195" y="252" font-size="16" font-style="italic" fill="#2563eb">a</text>
+          <text x="272" y="50" font-size="16" font-style="italic" fill="#2563eb">a</text>
+          <text x="82" y="145" font-size="16" font-style="italic" fill="#16a34a">b</text>
+          <text x="388" y="145" font-size="16" font-style="italic" fill="#16a34a">b</text>
+          <text x="148" y="150" font-size="16" font-style="italic" fill="#dc2626">h</text>
+
+          <!-- оройнууд -->
+          <text x="128" y="50" font-size="16" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="428" y="50" font-size="16" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="348" y="250" font-size="16" font-weight="bold" fill="#0f2b46">C</text>
+          <text x="44" y="250" font-size="16" font-weight="bold" fill="#0f2b46">D</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          a, b — талууд · h — a талд буулгасан өндөр · α — талуудын хоорондох өнцөг
+        </div>
+      </div>
+
+      <h2 class="buleg">Үндсэн чанарууд</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Тодорхойлолт</div>
+        <div class="tailbar">Параллелограмм гэдэг нь <b>эсрэг талууд нь хос хосоороо параллель</b> байх дөрвөн өнцөгт юм.</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Талууд ба өнцгүүд</div>
+        \( AB = CD, \quad BC = AD, \qquad \alpha + \beta = 180^\circ \)
+        <div class="tailbar">Эсрэг талууд тэнцүү, эсрэг өнцгүүд тэнцүү, залгаа өнцгүүдийн нийлбэр 180° байна</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Диагоналийн чанар</div>
+        \( AO = OC, \qquad BO = OD \)
+        <div class="tailbar">Диагоналууд огтлолцлын цэгээрээ <b>таллан хуваагдана</b>. Энэ цэг нь параллелограммын симметрийн төв бөгөөд диагональ бүр нь параллелограммыг хоёр тэнцүү гурвалжинд хуваана.</div>
+      </div>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="140,60 420,60 340,230 60,230" fill="#efe9fc" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <line x1="140" y1="60" x2="340" y2="230" stroke="#7c3aed" stroke-width="2"/>
+          <line x1="420" y1="60" x2="60" y2="230" stroke="#7c3aed" stroke-width="2"/>
+          <circle cx="240" cy="145" r="4.5" fill="#7c3aed"/>
+
+          <text x="248" y="138" font-size="15" font-weight="bold" fill="#7c3aed">O</text>
+          <text x="176" y="112" font-size="15" font-style="italic" fill="#7c3aed">d₁</text>
+          <text x="316" y="108" font-size="15" font-style="italic" fill="#7c3aed">d₂</text>
+          <text x="216" y="170" font-size="14" fill="#7c3aed">φ</text>
+
+          <text x="128" y="50" font-size="16" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="428" y="50" font-size="16" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="348" y="250" font-size="16" font-weight="bold" fill="#0f2b46">C</text>
+          <text x="44" y="250" font-size="16" font-weight="bold" fill="#0f2b46">D</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          Диагоналууд O цэгээрээ таллан хуваагдана · φ — диагоналуудын хоорондох өнцөг
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Диагоналийн урт</div>
+        \( d_1^2 = a^2 + b^2 - 2ab \cos \alpha \)
+        <div style="margin-top:10px;">
+          \( d_2^2 = a^2 + b^2 + 2ab \cos \alpha \)
+        </div>
+        <div class="tailbar">Косинусын теоремыг хоёр гурвалжинд хэрэглэсэн үр дүн — жижиг диагональ нь \( \alpha \) хурц өнцгийн эсрэг талд оршино</div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Параллелограммын адилтгал</div>
+        \( d_1^2 + d_2^2 = 2 \left( a^2 + b^2 \right) \)
+        <div class="tailbar">Хоёр диагоналийн квадратуудын нийлбэр нь бүх талуудын квадратуудын нийлбэртэй тэнцүү — ЭЕШ-д маш их таардаг</div>
+      </div>
+
+      <h2 class="buleg">Периметр ба талбай</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Периметр</div>
+        \( P = 2(a + b) \)
+        <div class="tailbar">Эсрэг талууд нь тэнцүү тул хоёр талын нийлбэрийг хоёр дахин авна</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Талбай — суурь × өндөр</div>
+        \( S = a \cdot h_a = b \cdot h_b \)
+        <div class="tailbar">Аль ч талыг суурь болгож болох ба тухайн талд буулгасан өндрөөр үржүүлнэ</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Талбай — хоёр тал ба өнцгөөр</div>
+        \( S = ab \sin \alpha \)
+        <div class="tailbar">Энд \( \alpha \) — a ба b талуудын хоорондох өнцөг. \( h_a = b \sin \alpha \) учраас дээд томьёотой ижил.</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Талбай — диагоналиар</div>
+        \( S = \dfrac{1}{2} d_1 d_2 \sin \varphi \)
+        <div class="tailbar">Энд \( \varphi \) — диагоналуудын хоорондох өнцөг</div>
+      </div>
+
+      <div class="tomyo-kart ongo5 huudas-tögsgöl">
+        <div class="ner">Онцгой тохиолдлууд</div>
+        \( \text{Ромб: } S = \dfrac{1}{2} d_1 d_2 \qquad \text{Тэгш өнцөгт: } S = ab \)
+        <div class="tailbar">Ромбын диагональ перпендикуляр (\( \sin 90^\circ = 1 \)), тэгш өнцөгтийн өнцөг 90° тул томьёонууд хялбарчилна. Параллелограммд тойрог багтаах бол ромб, тойрогт багтах бол тэгш өнцөгт байна.</div>
+      </div>
+    </div>
+  </body>
+</html>
