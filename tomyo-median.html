@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Медианы чанарууд — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga { position: relative; z-index: 1; }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 { font-size: 24px; margin-top: 20px; padding: 0 20px; }
+
+      h2.buleg { font-size: 19px; color: #f5b942; margin: 34px 0 4px; }
+
+      .zurag-kart {
+        background: white;
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 16px auto;
+        padding: 18px;
+      }
+
+      .zurag-kart svg { max-width: 100%; height: auto; }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar { font-size: 14px; margin-top: 8px; opacity: 0.7; }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+      .ongo6 { background: #fff0e6; }
+
+      .huudas-tögsgöl { margin-bottom: 60px; }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Медианы чанарууд</h1>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 270" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="235,40 60,230 410,230" fill="#e8f4fd" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <line x1="235" y1="40" x2="235" y2="230" stroke="#dc2626" stroke-width="1.8"/>
+          <line x1="60" y1="230" x2="322" y2="135" stroke="#dc2626" stroke-width="1.8"/>
+          <line x1="410" y1="230" x2="148" y2="135" stroke="#dc2626" stroke-width="1.8"/>
+
+          <circle cx="235" cy="230" r="3" fill="#0f2b46"/>
+          <circle cx="322" cy="135" r="3" fill="#0f2b46"/>
+          <circle cx="148" cy="135" r="3" fill="#0f2b46"/>
+
+          <circle cx="235" cy="167" r="5" fill="#f59e0b"/>
+          <text x="246" y="162" font-size="15" font-weight="bold" fill="#b45309">M</text>
+
+          <text x="219" y="110" font-size="13" fill="#dc2626">2</text>
+          <text x="219" y="205" font-size="13" fill="#dc2626">1</text>
+
+          <text x="228" y="30" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="38" y="244" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="420" y="244" font-size="17" font-weight="bold" fill="#0f2b46">C</text>
+
+          <text x="252" y="120" font-size="14" font-style="italic" fill="#dc2626">m₁</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          Гурван медиан нэг цэгт (M) огтлолцоно · M цэг медиан бүрийг оройноос нь 2:1 харьцаагаар хуваана
+        </div>
+      </div>
+
+      <h2 class="buleg">Үндсэн чанарууд</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Тодорхойлолт</div>
+        <div class="tailbar">Медиан гэдэг нь гурвалжны оройг эсрэг талын нь <b>дунд цэгтэй</b> холбосон хэрчим — өөрөөр хэлбэл медиан эсрэг талыг таллан хуваана.</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Талбайг хагаслан хуваана</div>
+        \( S_{ABM_a} = S_{ACM_a} = \dfrac{S}{2} \)
+        <div class="tailbar">Медиан гурвалжныг тэнцүү талбайтай хоёр гурвалжинд хуваана (суурь нь тэнцүү, өндөр нь ижил)</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Огтлолцлын цэг</div>
+        <div class="tailbar">Гурван медиан нэг цэгт огтлолцоно — энэ цэгийг гурвалжны <b>хүндийн төв (центроид)</b> гэнэ.</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">2 : 1 харьцаа</div>
+        \( AM : MM_a = 2 : 1 \)
+        <div class="tailbar">Огтлолцлын цэг медиан бүрийг оройноос нь тоолоход 2:1 харьцаагаар хуваана</div>
+      </div>
+
+      <h2 class="buleg">6 тэнцүү гурвалжин</h2>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 270" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="235,40 148,135 235,167" fill="#e8f4fd"/>
+          <polygon points="235,40 235,167 322,135" fill="#fef3d7"/>
+          <polygon points="322,135 235,167 410,230" fill="#e6f9ee"/>
+          <polygon points="235,167 235,230 410,230" fill="#fde8ef"/>
+          <polygon points="60,230 235,167 235,230" fill="#efe9fc"/>
+          <polygon points="60,230 148,135 235,167" fill="#fff0e6"/>
+          <polygon points="235,40 60,230 410,230" fill="none" stroke="#0f2b46" stroke-width="2.5"/>
+          <line x1="235" y1="40" x2="235" y2="230" stroke="#0f2b46" stroke-width="1.2"/>
+          <line x1="60" y1="230" x2="322" y2="135" stroke="#0f2b46" stroke-width="1.2"/>
+          <line x1="410" y1="230" x2="148" y2="135" stroke="#0f2b46" stroke-width="1.2"/>
+          <circle cx="235" cy="167" r="4" fill="#0f2b46"/>
+          <text x="200" y="120" font-size="12" fill="#5a6b85">S/6</text>
+          <text x="252" y="120" font-size="12" fill="#5a6b85">S/6</text>
+          <text x="300" y="180" font-size="12" fill="#5a6b85">S/6</text>
+          <text x="252" y="212" font-size="12" fill="#5a6b85">S/6</text>
+          <text x="196" y="212" font-size="12" fill="#5a6b85">S/6</text>
+          <text x="146" y="180" font-size="12" fill="#5a6b85">S/6</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          Гурван медиан гурвалжныг тэнцүү талбайтай 6 гурвалжинд хуваана
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">6 тэнцүү талбай</div>
+        \( S_1 = S_2 = \ldots = S_6 = \dfrac{S}{6} \)
+      </div>
+
+      <h2 class="buleg">Медианы урт</h2>
+
+      <div class="tomyo-kart ongo6 huudas-tögsgöl">
+        <div class="ner">Гурван талаас медианы уртыг олох</div>
+        \( m_a = \dfrac{1}{2} \sqrt{2b^2 + 2c^2 - a^2} \)
+        <div class="tailbar">Мөн адил: \( m_b = \dfrac{1}{2}\sqrt{2a^2 + 2c^2 - b^2}, \quad m_c = \dfrac{1}{2}\sqrt{2a^2 + 2b^2 - c^2} \). Медиан аль тал руу буусан бэ — тэр талын квадрат хасагдана гэж тогтооход амар.</div>
+      </div>
+    </div>
+  </body>
+</html>
