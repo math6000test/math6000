@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Биссектрисийн чанарууд — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga { position: relative; z-index: 1; }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 { font-size: 24px; margin-top: 20px; padding: 0 20px; }
+
+      h2.buleg { font-size: 19px; color: #f5b942; margin: 34px 0 4px; }
+
+      .zurag-kart {
+        background: white;
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 16px auto;
+        padding: 18px;
+      }
+
+      .zurag-kart svg { max-width: 100%; height: auto; }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar { font-size: 14px; margin-top: 8px; opacity: 0.7; }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+
+      .huudas-tögsgöl { margin-bottom: 60px; }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Биссектрисийн чанарууд</h1>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <!-- гурвалжин: A(200,40), B(60,240), C(420,240) -->
+          <polygon points="200,40 60,240 420,240" fill="#e8f4fd" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <!-- биссектрис A-аас: суурь D нь BD:DC = AB:AC харьцаагаар -->
+          <!-- AB≈244, AC≈297; BD/DC = 244/297 → D ≈ (222.4, 240) -->
+          <line x1="200" y1="40" x2="222" y2="240" stroke="#dc2626" stroke-width="2"/>
+          <circle cx="222" cy="240" r="3.5" fill="#dc2626"/>
+
+          <!-- А өнцгийг таллах тэмдэг: хоёр жижиг нум -->
+          <path d="M 178 72 A 38 38 0 0 1 204 78" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+          <path d="M 206 79 A 38 38 0 0 1 226 71" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+          <text x="182" y="94" font-size="12" fill="#dc2626">α</text>
+          <text x="212" y="94" font-size="12" fill="#dc2626">α</text>
+
+          <!-- оройн үсгүүд -->
+          <text x="192" y="30" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="38" y="254" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="430" y="254" font-size="17" font-weight="bold" fill="#0f2b46">C</text>
+          <text x="214" y="260" font-size="15" font-weight="bold" fill="#dc2626">D</text>
+
+          <!-- талууд ба хэрчмүүд -->
+          <text x="106" y="136" font-size="15" font-style="italic" fill="#2563eb">a</text>
+          <text x="322" y="132" font-size="15" font-style="italic" fill="#2563eb">b</text>
+          <text x="230" y="150" font-size="14" font-style="italic" fill="#dc2626">l</text>
+          <text x="132" y="232" font-size="14" font-style="italic" fill="#16a34a">a₁</text>
+          <text x="312" y="232" font-size="14" font-style="italic" fill="#16a34a">b₁</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          a, b — өнцгийг үүсгэгч талууд · l — биссектрис · a₁, b₁ — эсрэг талын хэрчмүүд
+        </div>
+      </div>
+
+      <h2 class="buleg">Үндсэн чанарууд</h2>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Тодорхойлолт</div>
+        <div class="tailbar">Биссектрис гэдэг нь гурвалжны өнцгийг <b>таллан хуваагч</b> цацрагийн орой ба эсрэг талын хоорондох хэрчим юм.</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Үндсэн чанар — эсрэг талыг хуваах харьцаа</div>
+        \( \dfrac{a_1}{b_1} = \dfrac{a}{b} \)
+        <div class="tailbar">Биссектрис эсрэг талыг залгаа хоёр талын харьцаагаар хуваана</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Огтлолцлын цэг</div>
+        <div class="tailbar">Гурван биссектрис нэг цэгт огтлолцоно — энэ цэг нь <b>багтсан тойргийн төв</b> бөгөөд гурвалжны гурван талаас ижил зайтай оршдог.</div>
+      </div>
+
+      <h2 class="buleg">Биссектрисийн урт</h2>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Язгуурын томьёо</div>
+        \( l = \sqrt{ab - a_1 b_1} \)
+        <div class="tailbar">Залгаа хоёр талын үржвэрээс эсрэг талын хэрчмүүдийн үржвэрийг хассаны язгуур</div>
+      </div>
+
+      <div class="tomyo-kart ongo5 huudas-tögsgöl">
+        <div class="ner">Өнцгөөр илэрхийлсэн томьёо</div>
+        \( l = \dfrac{2ab \cos \frac{\alpha}{2}}{a + b} \)
+        <div class="tailbar">Энд \( \alpha \) — биссектрисийн таллаж буй өнцөг</div>
+      </div>
+    </div>
+  </body>
+</html>
