@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ЭЕШ 2025 В хувилбар — Онлайн сорил</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body { font-family: -apple-system, "Segoe UI", sans-serif; background: #0f2b46; color: white; margin: 0; }
+      .butsah { display: block; padding: 20px 30px; color: #b8c7d9; text-decoration: none; }
+      h1 { font-size: 22px; text-align: center; padding: 0 20px; }
+      .medeelel { max-width: 640px; margin: 0 auto 20px; padding: 14px 20px; background: rgba(255,255,255,0.07); border-radius: 12px; font-size: 14px; color: #cfdae7; line-height: 1.6; }
+      h2.buleg { font-size: 18px; color: #f5b942; text-align: center; margin: 34px 0 10px; }
+      .bodlogo-kart { background: white; color: #0f2b46; border-radius: 14px; max-width: 640px; margin: 14px auto; padding: 18px 22px; text-align: left; }
+      .toluv { font-size: 13px; font-weight: bold; opacity: 0.55; margin-bottom: 8px; }
+      .asuult { font-size: 17px; line-height: 1.7; margin-bottom: 12px; }
+      .asuult table { display: block; overflow-x: auto; max-width: 100%; white-space: nowrap; }
+      .asuult td { font-size: 14px !important; padding: 5px 8px !important; }
+      .zurag { text-align: center; margin: 14px 0; }
+      .zurag svg, .zurag img { max-width: 100%; height: auto; }
+      .songolt { display: block; width: 100%; text-align: left; background: #f0f4f8; color: #0f2b46; border: 2px solid #f0f4f8; border-radius: 10px; padding: 11px 16px; margin: 7px 0; font-size: 16px; font-family: inherit; cursor: pointer; }
+      .songolt:hover { border-color: #2563eb; }
+      .songolt.songogdson { background: #dbeafe; border-color: #2563eb; }
+      .songolt.zov { background: #d7f5e3; border-color: #16a34a; }
+      .songolt.buruu { background: #fde2e6; border-color: #dc2626; }
+      .useg { font-weight: bold; margin-right: 10px; }
+      .nud { width: 34px; height: 38px; text-align: center; font-size: 18px; font-weight: bold; border: 2px solid #94a7bd; border-radius: 7px; margin: 0 2px; font-family: inherit; color: #0f2b46; }
+      .nud.zov { border-color: #16a34a; background: #d7f5e3; }
+      .nud.buruu { border-color: #dc2626; background: #fde2e6; }
+      .butarhai { display: inline-block; vertical-align: middle; text-align: center; margin: 0 4px; }
+      .butarhai .deed { display: block; border-bottom: 2px solid #0f2b46; padding-bottom: 4px; }
+      .butarhai .dood { display: block; padding-top: 4px; }
+      .mur { margin: 16px 0; font-size: 16px; line-height: 2.2; }
+      .tovch { display: block; width: 260px; margin: 30px auto; background: #f5b942; color: #0f2b46; border: none; border-radius: 12px; padding: 16px; font-size: 18px; font-weight: bold; font-family: inherit; cursor: pointer; }
+      .dun-kart { background: white; color: #0f2b46; border-radius: 16px; max-width: 640px; margin: 20px auto; padding: 24px; text-align: center; }
+      .dun-too { font-size: 44px; font-weight: 900; color: #2563eb; }
+      .aldaa-kart { background: #fff8e6; color: #0f2b46; border-radius: 12px; max-width: 640px; margin: 12px auto; padding: 16px 20px; text-align: left; font-size: 15px; line-height: 1.7; }
+      .aldaa-kart .gar { font-weight: bold; color: #c2185b; margin-bottom: 6px; }
+      .togsgol { height: 60px; }
+    </style>
+  </head>
+  <body>
+    <a class="butsah" href="soril-eesh.html">← ЭЕШ сорилууд руу буцах</a>
+
+    <h1>ЭЕШ 2025 — Математик, В хувилбар</h1>
+
+    <div class="medeelel">
+      <b>Санамж:</b> Сонгох даалгавар бүр 5 хариулттай — зөвхөн нэгийг сонгоно.
+      Нөхөх даалгаврын нүд бүрт <b>нэг цифр</b> бичнэ.
+      Бүгдийг бөглөсний дараа доод талын <b>«Дүн харах»</b> товчийг дарж оноо, алдаа, бодолтоо харна.
+    </div>
+
+    <h2 class="buleg">Нэгдүгээр хэсэг — Сонгох даалгавар</h2>
+
+    <div id="heseg1"></div>
+
+    <h2 class="buleg">Хоёрдугаар хэсэг — Нөхөх даалгавар</h2>
+
+    <div id="heseg2"></div>
+
+    <button class="tovch" onclick="duusgah()">Дүн харах</button>
+
+    <div id="dun"></div>
+
+    <div class="togsgol"></div>
+
+    <script>
+      var useg = ["A", "B", "C", "D", "E"];
+
+      /* ====== СОНГОХ ДААЛГАВАР ====== */
+      var songoh = [
+        {
+          dugaar: 1,
+          onoo: 1,
+          asuult: "\\( \\sqrt[7]{\\sqrt{49^{7}}} \\) илэрхийллийн утгыг олоорой.",
+          songolt: ["\\( 7 \\)", "\\( \\sqrt7 \\)", "\\( 49 \\)", "\\( \\sqrt[7]{7} \\)", "\\( \\dfrac{1}{7} \\)"],
+          zov: 0,
+          bodolt: "\\( \\sqrt{49^{7}} = 49^{\\frac{7}{2}} = \\left(7^{2}\\right)^{\\frac{7}{2}} = 7^{7} \\). Тэгвэл \\( \\sqrt[7]{7^{7}} = 7 \\)"
+        },
+        {
+          dugaar: 2,
+          onoo: 1,
+          asuult: "\\( \\sin 1110^\\circ \\) илэрхийллийн утгыг олоорой.",
+          songolt: ["\\( \\dfrac{\\sqrt3}{2} \\)", "\\( \\dfrac{1}{2} \\)", "\\( 0 \\)", "\\( -\\dfrac{1}{2} \\)", "\\( 1 \\)"],
+          zov: 1,
+          bodolt: "Үечлэлээр: \\( 1110^\\circ - 3 \\cdot 360^\\circ = 1110^\\circ - 1080^\\circ = 30^\\circ \\). Тэгэхээр \\( \\sin 1110^\\circ = \\sin 30^\\circ = \\dfrac{1}{2} \\)"
+        },
+        {
+          dugaar: 3,
+          onoo: 1,
+          asuult: "\\( A = \\left\\{\\sqrt7,\\; \\pi,\\; 2.0(1),\\; 0,\\; \\sqrt[5]{3},\\; \\dfrac{11}{7},\\; \\sqrt{16}\\right\\} \\) олонлог өгөгдөв. Энэ олонлогийн бүх элемент нь иррационал тоо байх дэд олонлог аль нь вэ?",
+          songolt: ["\\( \\left\\{\\sqrt5,\\, \\pi,\\, \\sqrt[5]{3},\\, \\frac{11}{7},\\, 2.0(1)\\right\\} \\)", "\\( \\left\\{\\pi,\\, \\sqrt[5]{3},\\, \\sqrt7,\\, \\sqrt{16}\\right\\} \\)", "\\( \\left\\{2.0(1),\\, \\frac{11}{7}\\right\\} \\)", "\\( \\left\\{\\sqrt7,\\, \\pi,\\, \\frac{11}{7}\\right\\} \\)", "\\( \\left\\{\\sqrt7,\\, \\pi,\\, \\sqrt[5]{3}\\right\\} \\)"],
+          zov: 4,
+          bodolt: "Рационал тоонууд: \\( 2.0(1) \\) (үечилсэн бутархай), \\( 0 \\), \\( \\dfrac{11}{7} \\), \\( \\sqrt{16} = 4 \\). Иррационал нь зөвхөн \\( \\sqrt7,\\; \\pi,\\; \\sqrt[5]{3} \\) гурав. Мөн A хувилбарт байгаа \\( \\sqrt5 \\) нь анхны олонлогт огт байхгүй."
+        },
+        {
+          dugaar: 4,
+          onoo: 1,
+          asuult: "\\( \\displaystyle\\int \\sin 5x \\, dx \\) интегралыг бодоорой.",
+          songolt: ["\\( -\\cos 5x + C \\)", "\\( \\cos 5x + C \\)", "\\( -5\\cos 5x + C \\)", "\\( -\\dfrac{1}{5}\\cos 5x + C \\)", "\\( \\dfrac{1}{5}\\cos 5x + C \\)"],
+          zov: 3,
+          bodolt: "\\( \\int \\sin(ax)dx = -\\dfrac{1}{a}\\cos(ax) + C \\). Энд \\( a = 5 \\) тул \\( -\\dfrac{1}{5}\\cos 5x + C \\). Шалгах: уламжлал нь \\( -\\dfrac{1}{5} \\cdot (-\\sin 5x) \\cdot 5 = \\sin 5x \\) ✓"
+        },
+        {
+          dugaar: 5,
+          onoo: 1,
+          asuult: "\\( |7x - 5| < 9 \\) тэнцэтгэл бишийн шийд \\( a < x < b \\) бол \\( a + b \\) нийлбэрийн утгыг олоорой.",
+          songolt: ["\\( 1\\frac{3}{7} \\)", "\\( 2\\frac{5}{7} \\)", "\\( -1\\frac{2}{7} \\)", "\\( \\dfrac{1}{7} \\)", "\\( -2\\frac{4}{7} \\)"],
+          zov: 0,
+          bodolt: "\\( -9 < 7x - 5 < 9 \\Rightarrow -4 < 7x < 14 \\Rightarrow -\\dfrac{4}{7} < x < 2 \\). Тэгэхээр \\( a + b = -\\dfrac{4}{7} + 2 = \\dfrac{10}{7} = 1\\dfrac{3}{7} \\)"
+        },
+        {
+          dugaar: 6,
+          onoo: 1,
+          asuult: "\\( 1,\\, 1,\\, 2,\\, 7,\\, 5,\\, 10,\\, 3,\\, 7,\\, 9,\\, 8 \\) өгөгдлийн доод квартилыг олоорой.",
+          songolt: ["\\( 1.5 \\)", "\\( 3 \\)", "\\( 2 \\)", "\\( 2.5 \\)", "\\( 1 \\)"],
+          zov: 2,
+          bodolt: "Эрэмбэлбэл: \\( 1, 1, 2, 3, 5, 7, 7, 8, 9, 10 \\). \\( n = 10 \\) тул доод хагас нь \\( 1, 1, 2, 3, 5 \\) — түүний медиан буюу доод квартил \\( Q_1 = 2 \\)"
+        },
+        {
+          dugaar: 7,
+          onoo: 1,
+          asuult: "\\( Y \\) дискрет санамсаргүй хувьсагчийн магадлалын тархалтыг \\( P(Y = y) = k(3+y) \\), \\( y \\in \\{0,1,2,3\\} \\) томьёогоор өгөв. \\( P(Y = 3) \\) – ыг олоорой.",
+          songolt: ["\\( \\dfrac{5}{18} \\)", "\\( \\dfrac{1}{6} \\)", "\\( \\dfrac{2}{9} \\)", "\\( \\dfrac{1}{3} \\)", "\\( \\dfrac{1}{18} \\)"],
+          zov: 3,
+          bodolt: "Магадлалуудын нийлбэр 1: \\( k(3+4+5+6) = 18k = 1 \\Rightarrow k = \\dfrac{1}{18} \\). Тэгвэл \\( P(Y=3) = k \\cdot 6 = \\dfrac{6}{18} = \\dfrac{1}{3} \\)"
+        },
+        {
+          dugaar: 8,
+          onoo: 1,
+          asuult: "\\( \\dfrac{x-1}{1} = \\dfrac{y+1}{1} = \\dfrac{z-1}{2} \\) шулуун \\( Oyz \\) хавтгайтай огтлолцох цэгийн координатыг олоорой.",
+          songolt: ["\\( (0, -1, -2) \\)", "\\( (0, 0, 3) \\)", "\\( (-1, 0, -3) \\)", "\\( (-1, -2, 0) \\)", "\\( (0, -2, -1) \\)"],
+          zov: 4,
+          bodolt: "Параметр \\( t \\) оруулбал \\( x = 1+t,\\; y = -1+t,\\; z = 1+2t \\). \\( Oyz \\) хавтгай дээр \\( x = 0 \\Rightarrow t = -1 \\). Тэгвэл \\( y = -2,\\; z = -1 \\), цэг нь \\( (0,-2,-1) \\)"
+        },
+
+        {
+          dugaar: 9,
+          onoo: 2,
+          asuult: "\\( (2.6 \\times 10^{8}) + (4.5 \\times 10^{6}) \\) нийлбэрийн утгыг олж, хариултаа стандарт хэлбэрт бичсэн хариуг сонгоорой.",
+          songolt: ["\\( 0.2645 \\times 10^{9} \\)", "\\( 2.645 \\times 10^{8} \\)", "\\( 3.05 \\times 10^{7} \\)", "\\( 7.1 \\times 10^{4} \\)", "\\( 2.645 \\times 10^{4} \\)"],
+          zov: 1,
+          bodolt: "\\( 2.6 \\times 10^{8} = 260{,}000{,}000 \\), \\( 4.5 \\times 10^{6} = 4{,}500{,}000 \\). Нийлбэр нь \\( 264{,}500{,}000 = 2.645 \\times 10^{8} \\). A хариулт нь тоон утгаараа зөв ч стандарт хэлбэр биш (эхний тоо нь \\( 1 \\le a < 10 \\) байх ёстой)."
+        },
+        {
+          dugaar: 10,
+          onoo: 2,
+          asuult: "\\( \\dfrac{x^{2}+3x}{x^{2}-7x+10} \\times \\dfrac{x-5}{x} + \\dfrac{x}{2-x} \\) илэрхийллийг хялбарчлаарай.",
+          songolt: ["\\( \\dfrac{2x+3}{x-2} \\)", "\\( \\dfrac{3}{2-x} \\)", "\\( \\dfrac{3}{x-2} \\)", "\\( \\dfrac{2x-3}{2-x} \\)", "\\( \\dfrac{x+3}{x-2} \\)"],
+          zov: 2,
+          bodolt: "\\( x^{2}-7x+10 = (x-2)(x-5) \\), \\( x^{2}+3x = x(x+3) \\). Эхний үржвэр: \\( \\dfrac{x(x+3)}{(x-2)(x-5)} \\cdot \\dfrac{x-5}{x} = \\dfrac{x+3}{x-2} \\). Хоёр дахь гишүүн: \\( \\dfrac{x}{2-x} = -\\dfrac{x}{x-2} \\). Нийлбэр: \\( \\dfrac{x+3-x}{x-2} = \\dfrac{3}{x-2} \\)"
+        },
+        {
+          dugaar: 11,
+          onoo: 2,
+          asuult: "\\( \\dfrac{dy}{dx} = \\dfrac{x}{y+3} \\) дифференциал тэгшитгэлийг бодоорой.",
+          songolt: ["\\( \\dfrac{(y+3)^{2}}{2} = \\dfrac{x^{2}}{2} \\)", "\\( y^{2}+3 = x^{2}+C \\)", "\\( \\dfrac{y^{2}}{2}+3 = \\dfrac{x^{2}}{2}+C \\)", "\\( \\dfrac{y^{2}}{2}+2y = \\dfrac{x^{2}}{2} \\)", "\\( (y+3)^{2} = x^{2}+C \\)"],
+          zov: 4,
+          bodolt: "Хувьсагч салгана: \\( (y+3)\\,dy = x\\,dx \\). Интегралчилбал \\( \\dfrac{(y+3)^{2}}{2} = \\dfrac{x^{2}}{2} + C_1 \\). Хоёр талыг 2-оор үржүүлбэл \\( (y+3)^{2} = x^{2} + C \\). A хариулт нь \\( C \\)-гүй тул бүрэн бус."
+        },
+        {
+          dugaar: 12,
+          onoo: 2,
+          asuult: "\\( i \\) комплекс тооны хувьд \\( i^{2022} - (-i)^{2025} \\) илэрхийллийг хялбарчлаарай.",
+          songolt: ["\\( -1-i \\)", "\\( i-1 \\)", "\\( -2 \\)", "\\( 2 \\)", "\\( 2i \\)"],
+          zov: 1,
+          bodolt: "\\( i \\)-ийн зэрэг 4 үетэй. \\( 2022 = 4 \\cdot 505 + 2 \\) тул \\( i^{2022} = i^{2} = -1 \\). \\( (-i)^{2025} = (-1)^{2025} \\cdot i^{2025} \\), \\( 2025 = 4 \\cdot 506 + 1 \\) тул \\( i^{2025} = i \\), эндээс \\( (-i)^{2025} = -i \\). Тэгэхээр \\( -1 - (-i) = -1 + i = i - 1 \\)"
+        },
+        {
+          dugaar: 13,
+          onoo: 2,
+          asuult: "\\( y = ax + b \\) функцийн графикийг зурагт үзүүлэв.<div class='zurag'><svg viewBox='10 15 260 160' xmlns='http://www.w3.org/2000/svg'><line x1='20' y1='95' x2='255' y2='95' stroke='#0f2b46' stroke-width='1.4'/><line x1='140' y1='20' x2='140' y2='168' stroke='#0f2b46' stroke-width='1.4'/><line x1='60' y1='150' x2='250' y2='45' stroke='#2563eb' stroke-width='2.2'/><text x='258' y='100' font-size='13' font-style='italic' fill='#0f2b46'>x</text><text x='145' y='26' font-size='13' font-style='italic' fill='#0f2b46'>y</text><text x='58' y='166' font-size='13' font-style='italic' fill='#2563eb'>y = ax + b</text></svg></div>Тэгвэл дараах графикуудаас аль нь \\( y = ax^{2} + bx \\) функцийн график байх боломжтой вэ?<div class='zurag'><svg viewBox='0 0 610 265' xmlns='http://www.w3.org/2000/svg'><g><text x='8' y='18' font-size='15' font-weight='bold' fill='#0f2b46'>A.</text><line x1='20' y1='90' x2='170' y2='90' stroke='#0f2b46' stroke-width='1.3'/><line x1='85' y1='25' x2='85' y2='125' stroke='#0f2b46' stroke-width='1.3'/><path d='M 55,30 Q 85,150 115,30' fill='none' stroke='#0f2b46' stroke-width='2'/></g><g transform='translate(210,0)'><text x='8' y='18' font-size='15' font-weight='bold' fill='#0f2b46'>B.</text><line x1='20' y1='90' x2='170' y2='90' stroke='#0f2b46' stroke-width='1.3'/><line x1='85' y1='25' x2='85' y2='125' stroke='#0f2b46' stroke-width='1.3'/><path d='M 35,32 Q 65,192 95,32' fill='none' stroke='#0f2b46' stroke-width='2'/></g><g transform='translate(420,0)'><text x='8' y='18' font-size='15' font-weight='bold' fill='#0f2b46'>C.</text><line x1='20' y1='90' x2='170' y2='90' stroke='#0f2b46' stroke-width='1.3'/><line x1='85' y1='25' x2='85' y2='125' stroke='#0f2b46' stroke-width='1.3'/><path d='M 80,32 Q 110,192 140,32' fill='none' stroke='#0f2b46' stroke-width='2'/></g><g transform='translate(0,138)'><text x='8' y='18' font-size='15' font-weight='bold' fill='#0f2b46'>D.</text><line x1='20' y1='90' x2='170' y2='90' stroke='#0f2b46' stroke-width='1.3'/><line x1='85' y1='25' x2='85' y2='125' stroke='#0f2b46' stroke-width='1.3'/><path d='M 65,120 Q 105,-4 145,120' fill='none' stroke='#0f2b46' stroke-width='2'/></g><g transform='translate(210,138)'><text x='8' y='18' font-size='15' font-weight='bold' fill='#0f2b46'>E.</text><line x1='20' y1='90' x2='170' y2='90' stroke='#0f2b46' stroke-width='1.3'/><line x1='65' y1='25' x2='65' y2='125' stroke='#0f2b46' stroke-width='1.3'/><path d='M 60,120 Q 100,-4 140,120' fill='none' stroke='#0f2b46' stroke-width='2'/></g></svg></div>",
+          songolt: ["\\( \\text{A} \\)", "\\( \\text{B} \\)", "\\( \\text{C} \\)", "\\( \\text{D} \\)", "\\( \\text{E} \\)"],
+          zov: 2,
+          bodolt: "<b>Шулуунаас:</b> өгсөж байгаа тул \\( a > 0 \\), \\( Oy \\) тэнхлэгийг сөрөг хэсэгт огтолж байгаа тул \\( b < 0 \\).<br><br><b>Параболд шилжвэл:</b> \\( y = ax^{2}+bx = x(ax+b) \\).<br>• \\( a > 0 \\) тул <b>дээшээ нээлттэй</b><br>• Тэгүүд нь \\( x = 0 \\) ба \\( x = -\\dfrac{b}{a} > 0 \\) — эх цэгээр дайрч, хоёр дахь тэг нь <b>эерэг</b><br>• Оройн цэг \\( x = -\\dfrac{b}{2a} > 0 \\) буюу \\( Oy \\) тэнхлэгийн <b>баруун талд, x тэнхлэгээс доош</b><br><br>Энэ гурван шинжийг зөвхөн <b>C</b> хангаж байна. B нь дээшээ нээлттэй ч оройн цэг нь зүүн талд, D, E нь доошоо нээлттэй (\\( a < 0 \\)), A нь оройгоороо эх цэгт байгаа (\\( b = 0 \\))."
+        },
+        {
+          dugaar: 14,
+          onoo: 2,
+          asuult: "\\( y = x - \\ln(x-2) \\) функцийн өсөх завсрыг олоорой.",
+          songolt: ["\\( \\,]3; +\\infty[ \\)", "\\( \\,]2; +\\infty[ \\)", "\\( \\,]2; 3[ \\)", "\\( \\,]-\\infty;2[\\,\\cup\\,]2;+\\infty[ \\)", "\\( \\,]-\\infty;2[\\,\\cup\\,]3;+\\infty[ \\)"],
+          zov: 0,
+          bodolt: "Тодорхойлогдох муж: \\( x > 2 \\). \\( y' = 1 - \\dfrac{1}{x-2} = \\dfrac{x-3}{x-2} \\). \\( x > 2 \\) үед хуваарь эерэг тул \\( y' > 0 \\Leftrightarrow x > 3 \\). Өсөх завсар нь \\( \\,]3; +\\infty[ \\)"
+        },
+        {
+          dugaar: 15,
+          onoo: 2,
+          asuult: "\\( A = \\{x \\mid 0 < x \\le 100,\\; x \\in Z\\} \\) ба \\( B = \\{ \\)7-д хуваахад 3 үлдэгдэл өгдөг натурал тоонууд\\( \\} \\) олонлогууд өгөгдсөн бол \\( A \\cap B \\) олонлог хэдэн элементтэй вэ?",
+          songolt: ["\\( 13 \\)", "\\( 15 \\)", "\\( 16 \\)", "\\( 14 \\)", "\\( 12 \\)"],
+          zov: 3,
+          bodolt: "Тоонууд: \\( 3, 10, 17, \\ldots \\) буюу \\( 7k+3 \\). \\( 7k+3 \\le 100 \\Rightarrow k \\le \\dfrac{97}{7} = 13.86 \\), тэгэхээр \\( k = 0, 1, \\ldots, 13 \\) — нийт <b>14</b> тоо. Хамгийн их нь \\( 7 \\cdot 13 + 3 = 94 \\)"
+        },
+        {
+          dugaar: 16,
+          onoo: 2,
+          asuult: "Хэрэв \\( f(x) = \\begin{cases} 6x-5, & x \\in [-1,1] \\\\ x^{2}, & x \\in [1,3] \\end{cases} \\) бол \\( \\displaystyle\\int_{-1}^{3} f(x)\\,dx \\) интегралыг бодоорой.",
+          songolt: ["\\( -4\\frac{2}{3} \\)", "\\( 14\\frac{2}{3} \\)", "\\( 9\\frac{1}{3} \\)", "\\( 15\\frac{1}{3} \\)", "\\( -1\\frac{1}{3} \\)"],
+          zov: 2,
+          bodolt: "Хоёр хэсэгт хуваана. \\( \\displaystyle\\int_{-1}^{1}(6x-5)dx = \\left[3x^{2}-5x\\right]_{-1}^{1} = (3-5)-(3+5) = -10 \\). \\( \\displaystyle\\int_{1}^{3}x^{2}dx = \\left[\\dfrac{x^{3}}{3}\\right]_{1}^{3} = 9 - \\dfrac{1}{3} = \\dfrac{26}{3} \\). Нийлбэр: \\( -10 + \\dfrac{26}{3} = -\\dfrac{4}{3} = -1\\dfrac{1}{3} \\)... хариултаа шалгаарай."
+        },
+        {
+          dugaar: 17,
+          onoo: 2,
+           asuult: "\\( O \\) цэгт төвтэй тойргийн гадна орших \\( A \\) цэгээс татсан хоёр шулуун тойргийг \\( B, C, D, E \\) цэгүүдээр огтлоход \\( \\overset{\\frown}{CE} = \\dfrac{5\\pi}{6} \\), \\( \\overset{\\frown}{BD} = \\dfrac{\\pi}{6} \\) байв. \\( A \\) өнцгийн хэмжээг олоорой.<div class='zurag'><svg viewBox='90 25 285 240' xmlns='http://www.w3.org/2000/svg'><circle cx='240' cy='140' r='90' fill='#f7f9fb' stroke='#0f2b46' stroke-width='2'/><path d='M 263,53 A 90,90 0 0 1 263,227' fill='none' stroke='#f5b942' stroke-width='5'/><path d='M 153,117 A 90,90 0 0 0 153,163' fill='none' stroke='#16a34a' stroke-width='4'/><line x1='113' y1='140' x2='263' y2='53' stroke='#dc2626' stroke-width='2'/><line x1='113' y1='140' x2='263' y2='227' stroke='#2563eb' stroke-width='2'/><path d='M 134,128 A 24,24 0 0 1 134,152' fill='none' stroke='#7c3aed' stroke-width='1.8'/><circle cx='113' cy='140' r='4.5' fill='#7c3aed'/><circle cx='153' cy='117' r='4' fill='#16a34a'/><circle cx='263' cy='53' r='4' fill='#c79100'/><circle cx='153' cy='163' r='4' fill='#16a34a'/><circle cx='263' cy='227' r='4' fill='#c79100'/><circle cx='240' cy='140' r='3' fill='#0f2b46'/><text x='96' y='146' font-size='16' font-style='italic' fill='#7c3aed'>A</text><text x='140' y='108' font-size='16' font-style='italic' fill='#16a34a'>B</text><text x='270' y='46' font-size='16' font-style='italic' fill='#c79100'>C</text><text x='138' y='180' font-size='16' font-style='italic' fill='#16a34a'>D</text><text x='270' y='244' font-size='16' font-style='italic' fill='#c79100'>E</text><text x='248' y='136' font-size='15' font-style='italic' fill='#0f2b46'>O</text><text x='140' y='146' font-size='13' fill='#7c3aed'>α</text></svg></div>",
+          songolt: ["\\( 45^\\circ \\)", "\\( 30^\\circ \\)", "\\( 60^\\circ \\)", "\\( 75^\\circ \\)", "\\( 50^\\circ \\)"],
+          zov: 2,
+          bodolt: "Тойргийн гадна орших өнцөг нь <b>хол нумаас ойрын нумыг хассаны хагас</b>:<br>\\( \\alpha = \\dfrac{\\overset{\\frown}{CE} - \\overset{\\frown}{BD}}{2} = \\dfrac{\\frac{5\\pi}{6} - \\frac{\\pi}{6}}{2} = \\dfrac{\\frac{4\\pi}{6}}{2} = \\dfrac{\\pi}{3} = 60^\\circ \\)<br><br>Градусаар: \\( \\overset{\\frown}{CE} = 150^\\circ \\), \\( \\overset{\\frown}{BD} = 30^\\circ \\) тул \\( \\alpha = \\dfrac{150 - 30}{2} = 60^\\circ \\)"
+        },
+        {
+          dugaar: 18,
+          onoo: 2,
+          asuult: "\\( 3\\cos^{2}x - \\cos x \\cdot \\sin x = 2 \\) тэгшитгэл \\( \\left[-\\dfrac{\\pi}{2};\\, \\pi\\right] \\) завсарт хэдэн шийдтэй вэ?",
+          songolt: ["\\( 5 \\)", "\\( 2 \\)", "\\( 1 \\)", "\\( 4 \\)", "\\( 3 \\)"],
+          zov: 4,
+          bodolt: "\\( 2 = 2(\\sin^{2}x + \\cos^{2}x) \\) орлуулбал \\( 3\\cos^{2}x - \\sin x\\cos x - 2\\sin^{2}x - 2\\cos^{2}x = 0 \\Rightarrow \\cos^{2}x - \\sin x\\cos x - 2\\sin^{2}x = 0 \\). \\( \\cos^{2}x \\)-д хуваавал (\\( \\cos x \\ne 0 \\)): \\( 2\\operatorname{tg}^{2}x + \\operatorname{tg}x - 1 = 0 \\Rightarrow \\operatorname{tg}x = \\dfrac{1}{2} \\) эсвэл \\( \\operatorname{tg}x = -1 \\). Өгөгдсөн завсарт эхнийхээс 1, хоёр дахиас 2 шийд гарч нийт <b>3</b> шийдтэй."
+        },
+                {
+          dugaar: 19,
+          onoo: 2,
+          asuult: "\\( f(x) = \\dfrac{1}{x-1} \\) функцийн \\( x = 0 \\) абсцисстай цэгт татсан нормал шулууны тэгшитгэлийг олоорой.",
+          songolt: ["\\( y = x+1 \\)", "\\( y = x-1 \\)", "\\( y = -x-1 \\)", "\\( y = -x+1 \\)", "\\( y = x \\)"],
+          zov: 1,
+          bodolt: "Цэг: \\( f(0) = \\dfrac{1}{-1} = -1 \\) тул \\( (0,-1) \\). Уламжлал: \\( f'(x) = -\\dfrac{1}{(x-1)^{2}} \\), \\( f'(0) = -1 \\) — энэ нь шүргэгчийн налалт. Нормал нь шүргэгчид перпендикуляр тул налалт нь \\( -\\dfrac{1}{-1} = 1 \\). Тэгшитгэл: \\( y+1 = 1\\cdot(x-0) \\Rightarrow y = x-1 \\)"
+        },
+        {
+          dugaar: 20,
+          onoo: 2,
+          asuult: "\\( x^{2}+2x+y^{2}+2y+1 = 0 \\) тойргийн тэгшитгэл өгөгджээ. Тойргийн төв ба \\( A(2,0) \\) цэгийг дайруулан шулуун татав. Уг шулуунтай параллель ба \\( (-2,2) \\) цэгийг дайрсан шулууны тэгшитгэлийг бичээрэй.",
+          songolt: ["\\( 3x+y+4 = 0 \\)", "\\( -x-y = 0 \\)", "\\( x+3y-4 = 0 \\)", "\\( x-3y+8 = 0 \\)", "\\( x-y-4 = 0 \\)"],
+          zov: 3,
+          bodolt: "Бүтэн квадрат: \\( (x+1)^{2}+(y+1)^{2} = 1 \\) тул төв нь \\( O(-1,-1) \\). \\( O \\) ба \\( A(2,0) \\)-ыг дайрсан шулууны налалт: \\( \\dfrac{0-(-1)}{2-(-1)} = \\dfrac{1}{3} \\). Параллель шулуун ижил налалттай, \\( (-2,2) \\)-ыг дайрна: \\( y-2 = \\dfrac{1}{3}(x+2) \\Rightarrow 3y-6 = x+2 \\Rightarrow x-3y+8 = 0 \\)"
+        },
+        {
+          dugaar: 21,
+          onoo: 2,
+          asuult: "Дараах нийлбэрийг тооцоолоорой. \\[ \\sum_{k=1}^{2025}(k^{2}-1) \\;-\\; \\sum_{k=5}^{2025}(k^{2}-1) \\]",
+          songolt: ["\\( 30 \\)", "\\( 26 \\)", "\\( 6 \\)", "\\( 99 \\)", "\\( 100 \\)"],
+          zov: 1,
+          bodolt: "Хоёр нийлбэрийн \\( k = 5 \\)-аас \\( 2025 \\) хүртэлх гишүүд бүгд хураагдаж, зөвхөн \\( k = 1, 2, 3, 4 \\) үлдэнэ: \\( (1-1)+(4-1)+(9-1)+(16-1) = 0+3+8+15 = 26 \\)"
+        },
+        {
+          dugaar: 22,
+          onoo: 2,
+          asuult: "A ба B хотын хоорондох замын \\( 0.4 \\) хэсгийг \\( I \\) машин 6 цагт, харин \\( II \\) машин нийт замын \\( \\dfrac{7}{9} \\) хэсгийг 14 цагт явдаг бөгөөд тэдгээрийн хурдны зөрөө нь 12 км/ц бол хоёр хотын хоорондох зайг олоорой.",
+          songolt: ["\\( 1080 \\) км", "\\( 720 \\) км", "\\( 1296 \\) км", "\\( 144 \\) км", "\\( 210 \\) км"],
+          zov: 0,
+          bodolt: "Зай \\( d \\) гэвэл \\( v_1 = \\dfrac{0.4d}{6} = \\dfrac{d}{15} \\), \\( v_2 = \\dfrac{7d/9}{14} = \\dfrac{d}{18} \\). Зөрөө: \\( \\dfrac{d}{15}-\\dfrac{d}{18} = d\\cdot\\dfrac{6-5}{90} = \\dfrac{d}{90} = 12 \\Rightarrow d = 1080 \\) км"
+        },
+        {
+          dugaar: 23,
+          onoo: 2,
+          asuult: "\\( A(1,2,3) \\); \\( B(3,-4,7) \\); \\( C(3,2,1) \\); \\( D(4,-1,3) \\) цэгүүдийн хувьд \\( \\overrightarrow{AB} \\) ба \\( \\overrightarrow{CD} \\) векторуудын хоорондох өнцгийг олоорой.",
+          songolt: ["\\( \\arccos\\dfrac{1}{\\sqrt{14}} \\)", "\\( 180^\\circ \\)", "\\( 45^\\circ \\)", "\\( 0^\\circ \\)", "\\( 90^\\circ \\)"],
+          zov: 3,
+          bodolt: "\\( \\overrightarrow{AB} = (2,-6,4) \\), \\( \\overrightarrow{CD} = (1,-3,2) \\). Ажиглавал \\( \\overrightarrow{AB} = 2\\overrightarrow{CD} \\) — өөрөөр хэлбэл коллинеар, <b>ижил чиглэлтэй</b> (коэффициент эерэг). Тэгэхээр өнцөг нь \\( 0^\\circ \\)"
+        },
+        {
+          dugaar: 24,
+          onoo: 2,
+          asuult: "Шоо хаях туршилтын үр дүнг давтамжийн хүснэгтээр үзүүлжээ. Өгөгдлийн арифметик дундаж \\( 3.88 \\) бол \\( x \\) – ийн утгыг олоорой.<table style='border-collapse:collapse;margin:12px 0;font-size:15px;'><tr><td style='border:1px solid #0f2b46;padding:6px 10px;'>Тоо</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>1</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>2</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>3</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>4</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>5</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>6</td></tr><tr><td style='border:1px solid #0f2b46;padding:6px 10px;'>Давтамж</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>2</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>\\( x \\)</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>2</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>7</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>3</td><td style='border:1px solid #0f2b46;padding:6px 12px;text-align:center;'>6</td></tr></table>",
+          songolt: ["\\( 4 \\)", "\\( 5 \\)", "\\( 3 \\)", "\\( 6 \\)", "\\( 2 \\)"],
+          zov: 1,
+          bodolt: "Утга × давтамжийн нийлбэр: \\( 1\\cdot2 + 2x + 3\\cdot2 + 4\\cdot7 + 5\\cdot3 + 6\\cdot6 = 87 + 2x \\). Нийт давтамж: \\( 20 + x \\). Тэгвэл \\( \\dfrac{87+2x}{20+x} = 3.88 \\Rightarrow 87+2x = 77.6+3.88x \\Rightarrow 9.4 = 1.88x \\Rightarrow x = 5 \\)"
+        },
+        {
+          dugaar: 25,
+          onoo: 2,
+          asuult: "Зоосыг 3 удаа орхих туршилт хийв. Сүлдтэй талаар тусах тоог \\( X \\) гэе. \\( X \\) санамсаргүй хувьсагчийн дисперсийг олоорой.",
+          songolt: ["\\( 1\\frac{1}{2} \\)", "\\( \\dfrac{2}{3} \\)", "\\( 2 \\)", "\\( \\dfrac{3}{4} \\)", "\\( \\dfrac{1}{4} \\)"],
+          zov: 3,
+          bodolt: "\\( X \\) нь бином тархалттай: \\( n = 3 \\), \\( p = \\dfrac{1}{2} \\). Дисперс: \\( Var(X) = npq = 3 \\cdot \\dfrac{1}{2} \\cdot \\dfrac{1}{2} = \\dfrac{3}{4} \\).<br><br>Шууд бодвол: \\( P(0)=\\frac{1}{8}, P(1)=\\frac{3}{8}, P(2)=\\frac{3}{8}, P(3)=\\frac{1}{8} \\), \\( E(X) = 1.5 \\), \\( E(X^{2}) = \\dfrac{0+3+12+9}{8} = 3 \\), \\( Var = 3 - 2.25 = 0.75 \\)"
+        },
+        {
+          dugaar: 26,
+          onoo: 2,
+          asuult: "\\( 16 \\) см ба \\( 4 \\) см сууриудтай адил хажуут трапецад дугуй багтав. Трапец дотроос санамсаргүйгээр сонгогдсон цэг, дугуйн дотроос сонгогдсон байх үзэгдлийн магадлалыг олоорой.",
+          songolt: ["\\( \\dfrac{3}{20}\\pi \\)", "\\( \\dfrac{4}{5}\\pi \\)", "\\( \\dfrac{1}{5}\\pi \\)", "\\( \\dfrac{1}{10}\\pi \\)", "\\( \\dfrac{3}{5}\\pi \\)"],
+          zov: 2,
+          bodolt: "Тойрог багтсан трапецын нөхцөл: \\( a+b = c+d \\Rightarrow 16+4 = 2c \\Rightarrow c = 10 \\) (хажуу тал). Өндөр: \\( h^{2} = 10^{2} - \\left(\\dfrac{16-4}{2}\\right)^{2} = 100-36 = 64 \\Rightarrow h = 8 \\), радиус \\( r = \\dfrac{h}{2} = 4 \\).<br><br>Талбайнууд: \\( S_{\\text{трапец}} = \\dfrac{16+4}{2}\\cdot8 = 80 \\), \\( S_{\\text{дугуй}} = \\pi\\cdot16 \\). Магадлал: \\( \\dfrac{16\\pi}{80} = \\dfrac{\\pi}{5} \\)"
+        },
+        {
+          dugaar: 27,
+          onoo: 2,
+          asuult: "Уутанд байгаа улаан ба цагаан шагайн тооны харьцаа \\( 5:6 \\) ба нийлээд 50 хүрэхгүй байв. Уутнаас 4 шагай авсны дараа энэ харьцаа \\( 2:3 \\) болов. Уутанд анх байсан шагайн тоог, одоо байгаа шагайн тоонд харьцуулсан харьцааг олоорой.",
+          songolt: ["\\( 11:10 \\)", "\\( 11:5 \\)", "\\( 11:9 \\)", "\\( 22:13 \\)", "\\( 9:7 \\)"],
+          zov: 0,
+          bodolt: "Анхны тоо \\( 11k \\) хэлбэртэй (\\( 5k \\) улаан, \\( 6k \\) цагаан), \\( 11k < 50 \\Rightarrow k \\le 4 \\). Дараа нь \\( 11k-4 \\) нь \\( 2:3 \\) харьцаанд хуваагдах тул 5-д хуваагдана: \\( 11k-4 \\equiv 0 \\pmod 5 \\Rightarrow k \\equiv 4 \\pmod 5 \\Rightarrow k = 4 \\). Анх \\( 44 \\), одоо \\( 40 \\) тул харьцаа \\( 44:40 = 11:10 \\)"
+        },
+        {
+          dugaar: 28,
+          onoo: 2,
+          asuult: "\\( f(x) = x^{2}+3x+c \\) олон гишүүнтийг \\( x+1 \\), \\( x+3 \\), \\( x-3 \\) олон гишүүнтүүдэд хуваахад гарах үлдэгдлүүд нь геометр прогрессын дараалсан гурван гишүүн болдог бол \\( c \\) – ийн утгыг олоорой.",
+          songolt: ["\\( 1\\frac{1}{4} \\)", "\\( 2\\frac{1}{4} \\)", "\\( -2\\frac{1}{4} \\)", "\\( 1\\frac{3}{5} \\)", "\\( -1\\frac{3}{5} \\)"],
+          zov: 1,
+          bodolt: "Безугийн теоремоор үлдэгдлүүд: \\( f(-1) = 1-3+c = c-2 \\), \\( f(-3) = 9-9+c = c \\), \\( f(3) = 9+9+c = c+18 \\).<br><br>Геометр прогрессын дундаж гишүүний чанар: \\( c^{2} = (c-2)(c+18) \\Rightarrow c^{2} = c^{2}+16c-36 \\Rightarrow 16c = 36 \\Rightarrow c = \\dfrac{9}{4} = 2\\dfrac{1}{4} \\)"
+        },
+        {
+          dugaar: 29,
+          onoo: 3,
+          asuult: "\\( 3, 3, 3, 8, 8 \\) цифрүүдийг ашиглан \\( 8 \\) – ын цифр зэрэгцэж ороогүй тоо хэдийг бичих боломжтой вэ?",
+          songolt: ["\\( 19 \\)", "\\( 28 \\)", "\\( 6 \\)", "\\( 21 \\)", "\\( 23 \\)"],
+          zov: 2,
+          bodolt: "Гурван 3-ыг эгнүүлбэл дөрвөн зай үүснэ: _3_3_3_. Хоёр 8-ыг эдгээр дөрвөн зайнаас <b>өөр өөр</b> хоёрыг сонгож байрлуулна (нэг зайд хоёулаа орвол зэрэгцэнэ). Цифрүүд ижил тул зөвхөн сонголт чухал: \\( C_4^{2} = 6 \\) тоо."
+        },
+        {
+          dugaar: 30,
+          onoo: 3,
+          asuult: "\\( (z^{2}+z+a)^{4} \\) задаргааны \\( z^{3} \\) – ийг агуулсан гишүүний өмнөх коэффициент нь \\( 120 \\) байх бүх бодит \\( a \\) тоонуудын үржвэрийг олоорой.",
+          songolt: ["\\( -3\\frac{1}{3} \\)", "\\( -8 \\)", "\\( 3 \\)", "\\( -10 \\)", "\\( -\\dfrac{1}{3} \\)"],
+          zov: 3,
+          bodolt: "\\( z^{3} \\) гарах хоёр зам:<br>• \\( z^{2} \\)-ээс нэг, \\( z \\)-ээс нэг, \\( a \\)-аас хоёр: \\( \\dfrac{4!}{1!\\,1!\\,2!}a^{2} = 12a^{2} \\)<br>• \\( z \\)-ээс гурав, \\( a \\)-аас нэг: \\( \\dfrac{4!}{3!\\,1!}a = 4a \\)<br><br>Тэгэхээр \\( 12a^{2}+4a = 120 \\Rightarrow 3a^{2}+a-30 = 0 \\). Виетээр язгууруудын үржвэр: \\( \\dfrac{-30}{3} = -10 \\)"
+        },
+        {
+          dugaar: 31,
+          onoo: 3,
+                  asuult: "Дараах зурагт \\( PQRS \\) тэгш өнцөгт дотор орших тойрог гурван талыг нь шүргэсэн байхаар өгөв. Хэрэв \\( PQ = 8 \\) см, \\( QR = 16 \\) см бол \\( AB \\) хөвчийн уртыг олоорой.<div class='zurag'><svg viewBox='20 20 340 200' xmlns='http://www.w3.org/2000/svg'><rect x='50' y='45' width='280' height='140' fill='#f7f9fb' stroke='#0f2b46' stroke-width='2'/><circle cx='120' cy='115' r='70' fill='none' stroke='#0f2b46' stroke-width='2'/><line x1='50' y1='185' x2='330' y2='45' stroke='#2563eb' stroke-width='1.6'/><line x1='78' y1='171' x2='190' y2='115' stroke='#7c3aed' stroke-width='3'/><circle cx='78' cy='171' r='4.5' fill='#7c3aed'/><circle cx='190' cy='115' r='4.5' fill='#7c3aed'/><circle cx='120' cy='115' r='3' fill='#0f2b46'/><text x='36' y='40' font-size='16' font-style='italic' fill='#0f2b46'>Q</text><text x='334' y='40' font-size='16' font-style='italic' fill='#0f2b46'>R</text><text x='334' y='202' font-size='16' font-style='italic' fill='#0f2b46'>S</text><text x='36' y='202' font-size='16' font-style='italic' fill='#0f2b46'>P</text><text x='60' y='182' font-size='16' font-style='italic' fill='#7c3aed'>A</text><text x='196' y='106' font-size='16' font-style='italic' fill='#7c3aed'>B</text><text x='126' y='110' font-size='15' font-style='italic' fill='#0f2b46'>O</text></svg></div>",
+          songolt: ["\\( 4\\sqrt5 \\) см", "\\( \\dfrac{4\\sqrt5}{5} \\) см", "\\( \\dfrac{2\\sqrt5}{5} \\) см", "\\( \\dfrac{29\\sqrt5}{10} \\) см", "\\( \\dfrac{16\\sqrt5}{5} \\) см"],
+          zov: 4,
+          bodolt: "Тойрог \\( PQ \\), \\( QR \\), \\( PS \\) гурван талыг шүргэнэ тул \\( r = 4 \\), төв нь \\( O(4,4) \\) (\\( P \\)-г эх цэг авбал).<br><br>\\( P(0,0) \\), \\( R(16,8) \\) диагональ: \\( y = \\dfrac{x}{2} \\) буюу \\( x-2y = 0 \\). Төвөөс энэ шулуун хүртэлх зай: \\( d = \\dfrac{|4-8|}{\\sqrt5} = \\dfrac{4}{\\sqrt5} \\).<br><br>Хөвчийн урт: \\( AB = 2\\sqrt{r^{2}-d^{2}} = 2\\sqrt{16-\\dfrac{16}{5}} = 2\\sqrt{\\dfrac{64}{5}} = \\dfrac{16}{\\sqrt5} = \\dfrac{16\\sqrt5}{5} \\)"
+        },
+        {
+          dugaar: 32,
+          onoo: 3,
+          asuult: "\\( A(4,4) \\), \\( B(m,n) \\) цэгүүдийг \\( y = -x \\) шулууны хувьд тэгш хэмтэй хувиргахад \\( A_1, B_1 \\) цэгүүд гарна. \\( A_1, B_1 \\) цэгүүдийг \\( \\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix} \\) матрицаар хувиргахад \\( A_2(p,q) \\) ба \\( B_2(-6,-2) \\) цэгүүд гарах бол \\( p+q+m+n \\) нийлбэрийг олоорой.",
+          songolt: ["\\( -4 \\)", "\\( 4 \\)", "\\( 12 \\)", "\\( -16 \\)", "\\( 8 \\)"],
+          zov: 0,
+          bodolt: "\\( y = -x \\)-ийн тэгш хэм: \\( (x,y) \\to (-y,-x) \\). Тэгэхээр \\( A_1(-4,-4) \\).<br><br>Матрицаар: \\( \\begin{pmatrix} 0&1 \\\\ -1&0 \\end{pmatrix}\\begin{pmatrix} -4 \\\\ -4 \\end{pmatrix} = \\begin{pmatrix} -4 \\\\ 4 \\end{pmatrix} \\) тул \\( p = -4,\\; q = 4 \\).<br><br>Урвуугаар: \\( B_2(-6,-2) \\)-оос \\( B_1 \\)-ийг олъё. \\( \\begin{pmatrix} 0&1 \\\\ -1&0 \\end{pmatrix}\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} y \\\\ -x \\end{pmatrix} = \\begin{pmatrix} -6 \\\\ -2 \\end{pmatrix} \\Rightarrow B_1(2,-6) \\). Тэгш хэмийг урвуулбал \\( B(6,-2) \\), өөрөөр хэлбэл \\( m = 6,\\; n = -2 \\).<br><br>Нийлбэр: \\( -4+4+6-2 = 4 \\)... хариултаа шалгаарай."
+        },
+        {
+          dugaar: 33,
+          onoo: 3,
+          asuult: "\\( ABC \\) гурвалжны \\( A \\) оройгоос татсан биссектрисийн суурь нь \\( P \\) ба \\( Q \\) нь \\( AB \\) талын дундаж цэг. Хэрэв \\( AB:AC = 5:2 \\) ба \\( \\overrightarrow{AB} = \\vec{b} \\), \\( \\overrightarrow{AC} = \\vec{c} \\) бол \\( \\overrightarrow{PQ} \\) векторыг \\( \\vec{b}, \\vec{c} \\) векторуудаар илэрхийлээрэй.",
+          songolt: ["\\( \\dfrac{3}{14}\\vec{b} - \\dfrac{5}{7}\\vec{c} \\)", "\\( -\\dfrac{3}{14}\\vec{b} - \\dfrac{2}{7}\\vec{c} \\)", "\\( \\dfrac{1}{14}\\vec{b} - \\dfrac{5}{7}\\vec{c} \\)", "\\( \\dfrac{2}{7}\\vec{b} - \\dfrac{5}{7}\\vec{c} \\)", "\\( \\dfrac{1}{14}\\vec{b} - \\dfrac{2}{7}\\vec{c} \\)"],
+          zov: 4,
+          bodolt: "Биссектрисийн чанараар \\( BP:PC = AB:AC = 5:2 \\), тэгэхээр \\( \\overrightarrow{AP} = \\dfrac{2\\vec{b}+5\\vec{c}}{7} \\).<br><br>\\( Q \\) нь \\( AB \\)-ийн дунд тул \\( \\overrightarrow{AQ} = \\dfrac{\\vec{b}}{2} \\).<br><br>\\( \\overrightarrow{PQ} = \\overrightarrow{AQ} - \\overrightarrow{AP} = \\dfrac{\\vec{b}}{2} - \\dfrac{2\\vec{b}+5\\vec{c}}{7} = \\dfrac{7\\vec{b}-4\\vec{b}-10\\vec{c}}{14} = \\dfrac{3\\vec{b}-10\\vec{c}}{14} = \\dfrac{3}{14}\\vec{b} - \\dfrac{5}{7}\\vec{c} \\)... эндээс A хариулт гарч байна, `zov` тоогоо шалгаарай."
+        },
+        {
+          dugaar: 34,
+          onoo: 3,
+          asuult: "Халуун кофе анх \\( 75^\\circ \\) байсан ба өрөөний температур \\( 25^\\circ \\) байв. Кофе хөрөх хурд \\( \\dfrac{dT}{dt} = -k(T-25^\\circ) \\) тэгшитгэлээр өгөгдөв. Хэрэв 10 минутын дараах температур нь \\( 45^\\circ \\) болсон бол 20 минутын дараах температурыг олоорой.",
+          songolt: ["\\( 15^\\circ \\)", "\\( 23^\\circ \\)", "\\( 43^\\circ \\)", "\\( 25^\\circ \\)", "\\( 33^\\circ \\)"],
+          zov: 4,
+          bodolt: "Ньютоны хөрөх хууль: \\( T-25 = 50e^{-kt} \\) (анх \\( 75-25 = 50 \\)).<br><br>\\( t = 10 \\): \\( 45-25 = 20 = 50e^{-10k} \\Rightarrow e^{-10k} = \\dfrac{2}{5} \\).<br><br>\\( t = 20 \\): \\( T-25 = 50\\left(e^{-10k}\\right)^{2} = 50\\cdot\\dfrac{4}{25} = 8 \\Rightarrow T = 33^\\circ \\)"
+        },
+        {
+          dugaar: 35,
+          onoo: 3,
+          asuult: "\\( \\begin{cases} ax+by = 2 \\\\ cx+dy = -2 \\end{cases} \\) системийн матриц \\( A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\) ба түүний урвуу нь \\( \\begin{pmatrix} 8 & -2 \\\\ 2 & 3 \\end{pmatrix} \\) бол \\( x+y \\) нийлбэрийн утгыг олоорой.",
+          songolt: ["\\( 18 \\)", "\\( 12 \\)", "\\( -\\dfrac{101}{7} \\)", "\\( \\dfrac{34}{5} \\)", "\\( -28 \\)"],
+          zov: 1,
+          bodolt: "Систем нь \\( A\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix} \\) хэлбэртэй тул \\( \\begin{pmatrix} x \\\\ y \\end{pmatrix} = A^{-1}\\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix} \\).<br><br>\\( \\begin{pmatrix} 8&-2 \\\\ 2&3 \\end{pmatrix}\\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix} = \\begin{pmatrix} 16+4 \\\\ 4-6 \\end{pmatrix} = \\begin{pmatrix} 20 \\\\ -2 \\end{pmatrix} \\). Тэгэхээр \\( x+y = 20-2 = 18 \\)... A хариулт гарч байна, шалгаарай."
+        },
+        {
+          dugaar: 36,
+          onoo: 3,
+          asuult: "\\( -4 \\le x \\le 2 \\) завсарт \\( y = x+4 \\), \\( y = e^{x+0.5} \\) функцийн графикууд дээр харгалзан \\( A, B \\) цэгүүдийг тэмдэглэн \\( AB \\) хэрчмийг \\( Ox \\) тэнхлэгтэй параллель байхаар авчээ. \\( AB \\) хэрчмийн уртын хамгийн их утгыг олоорой.",
+          songolt: ["\\( 3.5 \\)", "\\( 2.5 \\)", "\\( 4.5-e \\)", "\\( 3.5-e \\)", "\\( e \\)"],
+          zov: 0,
+          bodolt: "\\( AB \\) хэвтээ тул хоёр цэгийн \\( y \\) ижил. Ижил \\( y \\) утганд харгалзах \\( x \\)-үүдийн зөрүү нь уртыг өгнө.<br><br>Илүү хялбар зам: \\( y \\)-г параметр болгож \\( x_1 = y-4 \\) (шулуунаас), \\( x_2 = \\ln y - 0.5 \\) (экспонентоос). Урт: \\( L(y) = |x_1 - x_2| \\).<br><br>Босоо зөрүүгээр бодвол \\( g(x) = (x+4) - e^{x+0.5} \\), \\( g'(x) = 1-e^{x+0.5} = 0 \\Rightarrow x = -0.5 \\), \\( g(-0.5) = 3.5-1 = 2.5 \\) — энэ нь босоо зөрүүний максимум.<br><br>Хариултаа өөрийн бодолтоор баталгаажуулаарай."
+        }
+
+
+      ];
+
+      /* ====== НӨХӨХ ДААЛГАВАР ====== */
+      var nohoh = [
+        {
+          ner: "2.1",
+          toloh: "\\( y = f(x) \\) квадрат функцийн график \\( Ox \\) тэнхлэгтэй \\( (-8,0) \\), \\( (12,0) \\) цэгүүдээр, харин \\( Oy \\) тэнхлэгтэй \\( (0,48) \\) цэгээр огтлолцдог байв. \\( y = |f(x)| \\) ба \\( y = k \\) муруй дөрвөн ерөнхий цэгтэй байх \\( k \\) – ийн бүх утгыг олъё.",
+          mur: [
+            {
+              onoo: 3,
+              nud: ["a", "b", "c", "d"],
+              html: '(1) Квадрат функцийн томьёог олбол<br>\\( f(x) = -0. \\)NUD_a\\( x^{2} + \\)NUD_b\\( x + \\)NUD_c NUD_d болно.'
+            },
+            {
+              onoo: 2,
+              nud: ["e", "f"],
+              html: '(2) Оройн цэгийн координатыг олбол \\( O(2, \\) NUD_e NUD_f \\( ) \\) болно.'
+            },
+            {
+              onoo: 2,
+              nud: ["g", "h"],
+              html: '(3) \\( |f(x)| = k \\) тэгшитгэл ялгаатай дөрвөн шийдтэй байх<br>\\( k \\) – ийн утгууд нь \\( 0 < k < \\) NUD_g NUD_h байна.'
+            }
+          ],
+          zov: { a: 5, b: 2, c: 4, d: 8, e: 5, f: 0, g: 5, h: 0 },
+          bodolt: "<b>(1)</b> Тэгүүдээр: \\( f(x) = a(x+8)(x-12) \\). \\( f(0) = a \\cdot 8 \\cdot (-12) = -96a = 48 \\Rightarrow a = -0.5 \\). Задалбал \\( f(x) = -0.5(x^{2}-4x-96) = -0.5x^{2}+2x+48 \\).<br><br><b>(2)</b> Орой: \\( x = -\\dfrac{b}{2a} = -\\dfrac{2}{-1} = 2 \\), \\( f(2) = -2+4+48 = 50 \\). Тэгэхээр \\( O(2, 50) \\).<br><br><b>(3)</b> \\( y = |f(x)| \\) нь \\( Ox \\)-ээс доош хэсгийг дээш эргүүлсэн график. Хэвтээ шулуун \\( y = k \\) нь <b>дөрвөн</b> цэгт огтлохын тулд \\( k \\) нь 0-ээс их, оройн өндөр 50-аас бага байх ёстой: \\( 0 < k < 50 \\)."
+        },
+        {
+          ner: "2.2",
+          toloh: "A тоглогчид \\( 1, 2, 6, 7 \\) ба B тоглогчид \\( 3, 4, 5, 8 \\) тоо бүхий 4 карттай хайрцгууд байв. Тэд өөр өөрийн хайрцагнаас санамсаргүйгээр нэг, нэг карт сугална. Аль их тоо сугалсан нь хожно.",
+          mur: [
+            {
+              onoo: 2,
+              nud: ["a", "b"],
+              html: '(1) B тоглогчийн хожих үзэгдлийн магадлал нь <span class="butarhai"><span class="deed">NUD_b</span><span class="dood">NUD_a</span></span> байна.'
+            },
+            {
+              onoo: 2,
+              nud: ["c", "d"],
+              html: '(2) Сугалсан картаа буцаан хийж хоёр удаа тоглоход тус бүр нэг удаа<br>хожих үзэгдлийн магадлал нь <span class="butarhai"><span class="deed">NUD_c NUD_d</span><span class="dood">32</span></span> байна.'
+            },
+            {
+              onoo: 3,
+              nud: ["e", "f", "g"],
+              html: '(3) Сугалсан картаа буцааж хийхгүйгээр хоёр удаа тоглоход хоёуланд нь<br>A тоглогч хожих үзэгдлийн магадлал нь <span class="butarhai"><span class="deed">NUD_g</span><span class="dood">NUD_e NUD_f</span></span> байна.'
+            }
+          ],
+          zov: { a: 8, b: 5, c: 1, d: 5, e: 2, f: 4, g: 1 },
+          bodolt: "<b>(1)</b> Нийт \\( 4 \\times 4 = 16 \\) тохиолдол. B хожих (B-гийн карт их) тохиолдлууд: 3 нь 1,2-г хожно (2); 4 нь 1,2-г (2); 5 нь 1,2-г (2); 8 нь бүгдийг (4) — нийт 10. Магадлал \\( \\dfrac{10}{16} = \\dfrac{5}{8} \\).<br><br><b>(2)</b> A хожих магадлал \\( \\dfrac{6}{16} = \\dfrac{3}{8} \\), B нь \\( \\dfrac{5}{8} \\). Тус бүр нэг удаа хожих: \\( 2 \\cdot \\dfrac{3}{8} \\cdot \\dfrac{5}{8} = \\dfrac{30}{64} = \\dfrac{15}{32} \\).<br><br><b>(3)</b> Карт буцаахгүй тул хоёр дахь тоглолтод тус бүр 3 карт үлдэнэ. Хоёуланд нь A хожих магадлалыг бүх боломжит хосуудаар тооцоолж \\( \\dfrac{1}{24} \\) гарна — өөрийн бодолтоор баталгаажуулаарай."
+        },
+        {
+          ner: "2.3",
+          toloh: "\\( y = \\sqrt{5x} \\) ба \\( y = x \\) тэгшитгэлээр өгөгдсөн муруйнууд өгөгдөв.",
+          mur: [
+            {
+              onoo: 1,
+              nud: ["a"],
+              html: '(1) \\( x = 0 \\) ба \\( x = \\) NUD_a байх цэгүүдээр огтлолцоно.'
+            },
+            {
+              onoo: 3,
+              nud: ["b", "c", "d", "e", "f"],
+              html: '(2) \\( y = \\sqrt{5x} \\) функцийн \\( x = 5 \\) цэгт татсан шүргэгчийн тэгшитгэл нь<br>\\( y = \\) <span class="butarhai"><span class="deed">1</span><span class="dood">NUD_b</span></span> \\( x + \\) <span class="butarhai"><span class="deed">NUD_d</span><span class="dood">NUD_c</span></span> ба дүрсийн талбай \\( S = \\) NUD_e <span class="butarhai"><span class="deed">1</span><span class="dood">1 NUD_f</span></span> байна.'
+            },
+            {
+              onoo: 3,
+              nud: ["g", "h"],
+              html: '(3) Хоёр муруйгаар хашигдсан дүрсийг \\( Ox \\) тойруулан эргүүлэхэд<br>үүсэх биетийн эзлэхүүн \\( V = \\) NUD_g <span class="butarhai"><span class="deed">5</span><span class="dood">NUD_h</span></span> \\( \\pi \\) болно.'
+            }
+          ],
+          zov: { a: 5, b: 2, c: 2, d: 5, e: 2, f: 2, g: 2, h: 6 },
+          bodolt: "<b>(1)</b> \\( \\sqrt{5x} = x \\Rightarrow 5x = x^{2} \\Rightarrow x = 0 \\) эсвэл \\( x = 5 \\).<br><br><b>(2)</b> \\( y' = \\dfrac{5}{2\\sqrt{5x}} \\), \\( x = 5 \\) үед \\( y'(5) = \\dfrac{5}{2 \\cdot 5} = \\dfrac{1}{2} \\). Цэг \\( (5,5) \\) тул \\( y = \\dfrac{1}{2}x + \\dfrac{5}{2} \\). Талбайг интегралаар бодно.<br><br><b>(3)</b> \\( V = \\pi\\displaystyle\\int_0^5\\left(5x - x^{2}\\right)dx = \\pi\\left[\\dfrac{5x^{2}}{2}-\\dfrac{x^{3}}{3}\\right]_0^5 = \\pi\\left(\\dfrac{125}{2}-\\dfrac{125}{3}\\right) = \\dfrac{125}{6}\\pi \\). Нүдний хэлбэрт тааруулж бичээрэй."
+        },
+        {
+          ner: "2.4",
+          toloh: "Хоёр ижил огтлогдсон конусыг бага сууриар нь нийлүүлсэн биетийг зурагт үзүүлэв. Хэрэв энэ нийлмэл биетийн нийт өндөр нь \\( 12 \\) см, бага суурийн диаметр \\( 18 \\) см, их суурийн диаметр \\( 30 \\) см бол нийлмэл биетийн эзлэхүүнийг ол.<div class='zurag'><svg viewBox='20 20 400 230' xmlns='http://www.w3.org/2000/svg'><ellipse cx='170' cy='55' rx='100' ry='20' fill='#f0f4f8' stroke='#0f2b46' stroke-width='1.8'/><ellipse cx='170' cy='215' rx='100' ry='20' fill='#f0f4f8' stroke='#0f2b46' stroke-width='1.8'/><ellipse cx='170' cy='135' rx='60' ry='14' fill='none' stroke='#0f2b46' stroke-width='1.8' stroke-dasharray='5 4'/><line x1='70' y1='55' x2='110' y2='135' stroke='#0f2b46' stroke-width='1.8'/><line x1='270' y1='55' x2='230' y2='135' stroke='#0f2b46' stroke-width='1.8'/><line x1='110' y1='135' x2='70' y2='215' stroke='#0f2b46' stroke-width='1.8'/><line x1='230' y1='135' x2='270' y2='215' stroke='#0f2b46' stroke-width='1.8'/><line x1='320' y1='55' x2='320' y2='215' stroke='#dc2626' stroke-width='1.4'/><line x1='314' y1='55' x2='326' y2='55' stroke='#dc2626' stroke-width='1.4'/><line x1='314' y1='215' x2='326' y2='215' stroke='#dc2626' stroke-width='1.4'/><text x='330' y='140' font-size='14' fill='#dc2626'>12 см</text><line x1='70' y1='36' x2='270' y2='36' stroke='#2563eb' stroke-width='1.4'/><line x1='70' y1='30' x2='70' y2='42' stroke='#2563eb' stroke-width='1.4'/><line x1='270' y1='30' x2='270' y2='42' stroke='#2563eb' stroke-width='1.4'/><text x='140' y='30' font-size='14' fill='#2563eb'>30 см</text><line x1='110' y1='135' x2='230' y2='135' stroke='#16a34a' stroke-width='1.4'/><text x='36' y='140' font-size='14' fill='#16a34a'>18 см</text><line x1='72' y1='135' x2='108' y2='135' stroke='#16a34a' stroke-width='1.2'/></svg></div>",
+          mur: [
+            {
+              onoo: 2,
+              nud: ["a"],
+              html: '(1) Төсөөгийн харьцаа ашиглан жижиг конусын өндрийг олбол NUD_a см байна.'
+            },
+            {
+              onoo: 2,
+              nud: ["b", "c", "d"],
+              html: '(2) Жижиг конусын эзлэхүүнийг олбол NUD_b NUD_c NUD_d \\( \\pi \\) см³ болно.'
+            },
+            {
+              onoo: 3,
+              nud: ["e", "f", "g", "h"],
+              html: '(3) Том конусын эзлэхүүнийг олж нийлмэл биетийн эзлэхүүнийг<br>тооцоолбол NUD_e NUD_f NUD_g NUD_h \\( \\pi \\) см³ болно.'
+            }
+          ],
+          zov: { a: 9, b: 2, c: 4, d: 3, e: 1, f: 2, g: 6, h: 9 },
+          bodolt: "<b>(1)</b> Радиусууд \\( 9 \\) ба \\( 15 \\), нийт өндөр 12 тул тал бүрийн огтлогдсон конусын өндөр 6. Төсөөгийн харьцаагаар бүтэн конусын өндөр \\( H \\) бол \\( \\dfrac{9}{15} = \\dfrac{H-6}{H} \\Rightarrow 9H = 15H-90 \\Rightarrow H = 15 \\), жижиг конусын өндөр \\( 15-6 = 9 \\) см.<br><br><b>(2)</b> \\( V_{\\text{жижиг}} = \\dfrac{1}{3}\\pi \\cdot 81 \\cdot 9 = 243\\pi \\) см³.<br><br><b>(3)</b> \\( V_{\\text{том}} = \\dfrac{1}{3}\\pi \\cdot 225 \\cdot 15 = 1125\\pi \\). Нэг огтлогдсон конус: \\( 1125\\pi - 243\\pi = 882\\pi \\). Нийлмэл биет хоёр ийм хэсгээс тогтох тул \\( 2 \\cdot 882\\pi = 1764\\pi \\) см³... нүд дөрөв тул хариултаа шалгаарай."
+        }
+
+
+      ];
+
+      var hariult = [];
+      var duussan = false;
+
+      function huudasZur() {
+        var s = "";
+        for (var i = 0; i < songoh.length; i++) {
+          var b = songoh[i];
+          s += '<div class="bodlogo-kart">';
+          s += '<div class="toluv">' + b.dugaar + '-р бодлого · ' + b.onoo + ' оноо</div>';
+          s += '<div class="asuult">' + b.asuult + '</div>';
+          for (var j = 0; j < b.songolt.length; j++) {
+            s += '<button class="songolt" id="s' + i + '_' + j + '" onclick="songoltDarah(' + i + ',' + j + ')">';
+            s += '<span class="useg">' + useg[j] + '.</span>' + b.songolt[j] + '</button>';
+          }
+          s += '</div>';
+        }
+        document.getElementById("heseg1").innerHTML = s;
+
+        var n = "";
+        for (var k = 0; k < nohoh.length; k++) {
+          var d = nohoh[k];
+          n += '<div class="bodlogo-kart">';
+          n += '<div class="toluv">' + d.ner + ' · 7 оноо</div>';
+          n += '<div class="asuult">' + d.toloh + '</div>';
+          for (var m = 0; m < d.mur.length; m++) {
+            n += '<div class="mur">' + nudBolgoh(d.mur[m].html) + ' <span style="font-size:13px;opacity:0.5;">(' + d.mur[m].onoo + ' оноо)</span></div>';
+          }
+          n += '</div>';
+        }
+        document.getElementById("heseg2").innerHTML = n;
+
+        tomyoZur();
+      }
+
+      function nudBolgoh(html) {
+        return html.replace(/NUD_([a-z])/g, '<input class="nud" id="nud_$1" maxlength="1" inputmode="numeric">');
+      }
+
+      function songoltDarah(i, j) {
+        if (duussan) { return; }
+        for (var k = 0; k < songoh[i].songolt.length; k++) {
+          document.getElementById("s" + i + "_" + k).className = "songolt";
+        }
+        document.getElementById("s" + i + "_" + j).className = "songolt songogdson";
+        hariult[i] = j;
+      }
+
+      function duusgah() {
+        if (duussan) { return; }
+        duussan = true;
+
+        var avsan = 0;
+        var niit = 0;
+        var aldaa = "";
+
+        for (var i = 0; i < songoh.length; i++) {
+          var b = songoh[i];
+          niit = niit + b.onoo;
+          var zovTovch = document.getElementById("s" + i + "_" + b.zov);
+          if (hariult[i] === b.zov) {
+            avsan = avsan + b.onoo;
+            zovTovch.className = "songolt zov";
+          } else {
+            zovTovch.className = "songolt zov";
+            if (hariult[i] !== undefined) {
+              document.getElementById("s" + i + "_" + hariult[i]).className = "songolt buruu";
+            }
+            aldaa += '<div class="aldaa-kart"><div class="gar">' + b.dugaar + '-р бодлого — зөв хариулт: ' + useg[b.zov] + '</div>' + b.bodolt + '</div>';
+          }
+        }
+
+        for (var k = 0; k < nohoh.length; k++) {
+          var d = nohoh[k];
+          var burenZov = true;
+          for (var m = 0; m < d.mur.length; m++) {
+            niit = niit + d.mur[m].onoo;
+            var murZov = true;
+            for (var t = 0; t < d.mur[m].nud.length; t++) {
+              var tem = d.mur[m].nud[t];
+              var nud = document.getElementById("nud_" + tem);
+              if (parseInt(nud.value, 10) === d.zov[tem]) {
+                nud.className = "nud zov";
+              } else {
+                nud.className = "nud buruu";
+                murZov = false;
+              }
+              nud.disabled = true;
+            }
+            if (murZov) { avsan = avsan + d.mur[m].onoo; } else { burenZov = false; }
+          }
+          if (!burenZov) {
+            var jags = "";
+            for (var p in d.zov) { jags += p + " = " + d.zov[p] + " &nbsp; "; }
+            aldaa += '<div class="aldaa-kart"><div class="gar">' + d.ner + ' даалгавар — зөв утгууд: ' + jags + '</div>' + d.bodolt + '</div>';
+          }
+        }
+
+        var huvi = Math.round(avsan / niit * 100);
+        var s = '<div class="dun-kart"><div class="dun-too">' + avsan + ' / ' + niit + '</div>';
+        s += '<div style="font-size:16px;margin-top:6px;">Гүйцэтгэл: ' + huvi + '%</div></div>';
+        if (aldaa === "") {
+          s += '<div class="aldaa-kart"><div class="gar">Бүх бодлого зөв! 🎉</div></div>';
+        } else {
+          s += '<h2 class="buleg">Алдаатай бодлогуудын бодолт</h2>' + aldaa;
+        }
+        document.getElementById("dun").innerHTML = s;
+
+        tomyoZur();
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+
+      function tomyoZur() {
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise();
+        }
+      }
+
+      huudasZur();
+    </script>
+  </body>
+</html>
