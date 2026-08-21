@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тойрог — Математикийн 6000 тест</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, "Segoe UI", sans-serif;
+        background: #0f2b46;
+        color: white;
+        margin: 0;
+        text-align: center;
+      }
+
+      .usan-temdeg {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+        font-size: 110px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.045);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .aguulga { position: relative; z-index: 1; }
+
+      .butsah {
+        display: block;
+        text-align: left;
+        padding: 20px 40px;
+        color: #b8c7d9;
+        text-decoration: none;
+      }
+
+      h1 { font-size: 24px; margin-top: 20px; padding: 0 20px; }
+
+      h2.buleg { font-size: 19px; color: #f5b942; margin: 34px 0 4px; }
+
+      .zurag-kart {
+        background: white;
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 16px auto;
+        padding: 18px;
+      }
+
+      .zurag-kart svg { max-width: 100%; height: auto; }
+
+      .tomyo-kart {
+        border-radius: 14px;
+        max-width: 520px;
+        margin: 14px auto;
+        padding: 20px 26px;
+        text-align: left;
+        font-size: 18px;
+        color: #0f2b46;
+        overflow-x: auto;
+      }
+
+      .tomyo-kart .ner {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        opacity: 0.65;
+      }
+
+      .tomyo-kart .tailbar { font-size: 14px; margin-top: 8px; opacity: 0.7; }
+
+      .ongo1 { background: #e8f4fd; }
+      .ongo2 { background: #fef3d7; }
+      .ongo3 { background: #e6f9ee; }
+      .ongo4 { background: #fde8ef; }
+      .ongo5 { background: #efe9fc; }
+
+      .huudas-tögsgöl { margin-bottom: 60px; }
+    </style>
+  </head>
+  <body>
+    <div class="usan-temdeg">6000 тест</div>
+
+    <div class="aguulga">
+      <a class="butsah" href="tomyo.html">← Томьёоны сан руу буцах</a>
+
+      <h1>Тойрог — шүргэгч, огтлогч, хөвч</h1>
+
+      <h2 class="buleg">Шүргэгч ба огтлогч</h2>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="180" cy="150" r="90" fill="#e8f4fd" stroke="#0f2b46" stroke-width="2.5"/>
+          <circle cx="180" cy="150" r="3.5" fill="#0f2b46"/>
+
+          <line x1="420" y1="150" x2="214" y2="67" stroke="#2563eb" stroke-width="2"/>
+          <line x1="420" y1="150" x2="214" y2="233" stroke="#2563eb" stroke-width="2"/>
+          <circle cx="214" cy="67" r="4" fill="#2563eb"/>
+          <circle cx="214" cy="233" r="4" fill="#2563eb"/>
+          <circle cx="420" cy="150" r="4" fill="#2563eb"/>
+
+          <text x="160" y="158" font-size="17" font-weight="bold" fill="#0f2b46">O</text>
+          <text x="430" y="156" font-size="17" font-weight="bold" fill="#2563eb">A</text>
+          <text x="204" y="54" font-size="17" font-weight="bold" fill="#2563eb">B</text>
+          <text x="204" y="256" font-size="17" font-weight="bold" fill="#2563eb">C</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          A цэгээс татсан хоёр шүргэгч
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Шүргэгчийн үндсэн чанар</div>
+        \( OB \perp AB \)
+        <div class="tailbar">Шүргэлтийн цэг рүү татсан радиус нь шүргэгчид <b>перпендикуляр</b> байна</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Нэг цэгээс татсан хоёр шүргэгч</div>
+        \( AB = AC \)
+        <div class="tailbar">Тойргийн гадна орших нэг цэгээс татсан шүргэгчийн уртууд тэнцүү. Мөн \( AO \) нь \( \angle BAC \)-ийн биссектрис болно.</div>
+      </div>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="150" r="95" fill="#fef3d7" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <line x1="167" y1="61" x2="248" y2="232" stroke="#dc2626" stroke-width="2"/>
+          <line x1="106" y1="167" x2="294" y2="134" stroke="#2563eb" stroke-width="2"/>
+          <circle cx="208" cy="149" r="4" fill="#0f2b46"/>
+
+          <circle cx="167" cy="61" r="3.5" fill="#dc2626"/>
+          <circle cx="248" cy="232" r="3.5" fill="#dc2626"/>
+          <circle cx="106" cy="167" r="3.5" fill="#2563eb"/>
+          <circle cx="294" cy="134" r="3.5" fill="#2563eb"/>
+
+          <text x="170" y="106" font-size="17" font-style="italic" fill="#dc2626">a</text>
+          <text x="232" y="196" font-size="17" font-style="italic" fill="#dc2626">b</text>
+          <text x="148" y="180" font-size="17" font-style="italic" fill="#2563eb">c</text>
+          <text x="248" y="126" font-size="17" font-style="italic" fill="#2563eb">d</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          Огтлолцсон хоёр хөвч
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Огтлолцсон хөвчийн теорем</div>
+        \( a \cdot b = c \cdot d \)
+        <div class="tailbar">Тойргийн дотор огтлолцсон хоёр хөвчийн хэрчмүүдийн үржвэрүүд тэнцүү</div>
+      </div>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="180" cy="150" r="90" fill="#e6f9ee" stroke="#0f2b46" stroke-width="2.5"/>
+          <circle cx="180" cy="150" r="3.5" fill="#0f2b46"/>
+
+          <line x1="420" y1="150" x2="214" y2="67" stroke="#dc2626" stroke-width="2"/>
+          <line x1="420" y1="150" x2="127" y2="223" stroke="#2563eb" stroke-width="2"/>
+
+          <circle cx="214" cy="67" r="4" fill="#dc2626"/>
+          <circle cx="420" cy="150" r="4" fill="#0f2b46"/>
+          <circle cx="261" cy="190" r="4" fill="#2563eb"/>
+          <circle cx="127" cy="223" r="4" fill="#2563eb"/>
+
+          <text x="160" y="158" font-size="17" font-weight="bold" fill="#0f2b46">O</text>
+          <text x="430" y="156" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="204" y="54" font-size="17" font-weight="bold" fill="#dc2626">B</text>
+          <text x="264" y="210" font-size="17" font-weight="bold" fill="#2563eb">E</text>
+          <text x="108" y="243" font-size="17" font-weight="bold" fill="#2563eb">C</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          AB — шүргэгч · AC — огтлогч
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Шүргэгч, огтлогчийн теорем</div>
+        \( AB^2 = AE \cdot AC \)
+        <div class="tailbar">Шүргэгчийн квадрат нь огтлогчийн бүтэн урт ба гадна хэрчмийн үржвэртэй тэнцүү</div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Хоёр огтлогчийн теорем</div>
+        \( AB \cdot AD = AE \cdot AC \)
+        <div class="tailbar">Нэг цэгээс татсан хоёр огтлогчийн хувьд бүтэн урт × гадна хэрчим нь тэнцүү байна</div>
+      </div>
+
+      <h2 class="buleg">Тойргийн өнцгүүд</h2>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="150" r="95" fill="#efe9fc" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <line x1="200" y1="150" x2="282" y2="198" stroke="#0f2b46" stroke-width="2"/>
+          <line x1="200" y1="150" x2="248" y2="68" stroke="#0f2b46" stroke-width="2"/>
+          <line x1="105" y1="150" x2="282" y2="198" stroke="#2563eb" stroke-width="2"/>
+          <line x1="105" y1="150" x2="248" y2="68" stroke="#2563eb" stroke-width="2"/>
+
+          <path d="M 226 165 A 30 30 0 0 0 224 133" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+          <path d="M 145 140 A 40 40 0 0 0 143 161" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+
+          <circle cx="200" cy="150" r="3.5" fill="#0f2b46"/>
+          <circle cx="282" cy="198" r="4" fill="#0f2b46"/>
+          <circle cx="248" cy="68" r="4" fill="#0f2b46"/>
+          <circle cx="105" cy="150" r="4" fill="#2563eb"/>
+
+          <text x="180" y="166" font-size="17" font-weight="bold" fill="#0f2b46">O</text>
+          <text x="290" y="212" font-size="17" font-weight="bold" fill="#0f2b46">A</text>
+          <text x="254" y="58" font-size="17" font-weight="bold" fill="#0f2b46">B</text>
+          <text x="86" y="146" font-size="17" font-weight="bold" fill="#2563eb">C</text>
+          <text x="234" y="146" font-size="16" fill="#dc2626">α</text>
+          <text x="150" y="158" font-size="14" fill="#2563eb">α/2</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          Төв өнцөг α ба түүнтэй ижил нумд тулгуурласан багтсан өнцөг
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Төв өнцөг</div>
+        \( \angle AOB = \overset{\frown}{AB} \)
+        <div class="tailbar">Төв өнцөг нь тулгуурласан нумныхаа хэмжээтэй тэнцүү</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Багтсан өнцөг</div>
+        \( \angle BCA = \dfrac{1}{2} \overset{\frown}{BA} = \dfrac{\alpha}{2} \)
+        <div class="tailbar">Багтсан өнцөг нь тулгуурласан нумныхаа хагастай тэнцүү. Иймд <b>нэг нумд тулгуурласан бүх багтсан өнцгүүд тэнцүү</b> байна.</div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Диаметрт тулгуурласан өнцөг</div>
+        \( \angle ACB = 90^\circ \)
+        <div class="tailbar">Хагас тойрогт тулгуурласан багтсан өнцөг үргэлж тэгш өнцөг байна</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Шүргэгч ба хөвчийн хоорондох өнцөг</div>
+        \( \angle BAC = \angle BDA = \dfrac{1}{2} \overset{\frown}{AB} \)
+        <div class="tailbar">Шүргэгч ба хөвчийн үүсгэсэн өнцөг нь тэр хөвчинд тулгуурласан багтсан өнцөгтэй тэнцүү</div>
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Тойргийн гадна орших өнцөг</div>
+        \( \alpha = \dfrac{\overset{\frown}{AB} - \overset{\frown}{ED}}{2} \)
+        <div class="tailbar">Оройг нь тойргийн гадна байрлах хоёр огтлогчийн үүсгэсэн өнцөг — хоёр нумын <b>ялгаврын</b> хагас</div>
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Тойргийн дотор орших өнцөг</div>
+        \( \alpha = \dfrac{\overset{\frown}{AB} + \overset{\frown}{CD}}{2} \)
+        <div class="tailbar">Тойргийн дотор огтлолцсон хоёр хөвчийн үүсгэсэн өнцөг — хоёр нумын <b>нийлбэрийн</b> хагас</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Багтсан дөрвөн өнцөгт</div>
+        \( \alpha + \gamma = 180^\circ, \qquad \beta + \delta = 180^\circ \)
+        <div class="tailbar">Тойрогт багтсан дөрвөн өнцөгтийн эсрэг өнцгүүдийн нийлбэр 180° байна (мөн урвуу нь үнэн)</div>
+      </div>
+
+      <h2 class="buleg">Урт ба талбай</h2>
+
+      <div class="zurag-kart">
+        <svg viewBox="0 0 470 280" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="150" r="100" fill="#f7f9fb" stroke="#0f2b46" stroke-width="2.5"/>
+
+          <path d="M 200,150 L 234,56 A 100,100 0 0 1 298.5,167.4 Z" fill="#fde8ef" stroke="none"/>
+          <path d="M 234,56 A 100,100 0 0 1 298.5,167.4 Z" fill="#e6f9ee" stroke="none"/>
+
+          <line x1="200" y1="150" x2="234" y2="56" stroke="#dc2626" stroke-width="2"/>
+          <line x1="200" y1="150" x2="298.5" y2="167.4" stroke="#dc2626" stroke-width="2"/>
+          <line x1="234" y1="56" x2="298.5" y2="167.4" stroke="#16a34a" stroke-width="2"/>
+          <path d="M 234,56 A 100,100 0 0 1 298.5,167.4" fill="none" stroke="#7c3aed" stroke-width="3"/>
+
+          <path d="M 212,117 A 35 35 0 0 1 234.5,156" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+          <circle cx="200" cy="150" r="3.5" fill="#0f2b46"/>
+
+          <text x="228" y="136" font-size="16" fill="#dc2626">α</text>
+          <text x="200" y="102" font-size="17" font-style="italic" fill="#dc2626">R</text>
+          <text x="302" y="86" font-size="17" font-style="italic" fill="#7c3aed">l</text>
+          <text x="176" y="166" font-size="16" font-weight="bold" fill="#0f2b46">O</text>
+          <text x="316" y="122" font-size="13" fill="#16a34a">сегмент</text>
+          <text x="212" y="184" font-size="13" fill="#c2185b">сектор</text>
+        </svg>
+        <div style="color:#5a6b85; font-size:13px; margin-top:6px;">
+          Ягаан — секторын талбай · ногоон — сегментийн талбай · ягаан ягаан нум l
+        </div>
+      </div>
+
+      <div class="tomyo-kart ongo3">
+        <div class="ner">Тойргийн урт (периметр)</div>
+        \( C = 2 \pi R = \pi d \)
+        <div class="tailbar">Энд \( d = 2R \) — диаметр</div>
+      </div>
+
+      <div class="tomyo-kart ongo4">
+        <div class="ner">Тойргийн талбай</div>
+        \( S = \pi R^2 = \dfrac{\pi d^2}{4} \)
+      </div>
+
+      <div class="tomyo-kart ongo5">
+        <div class="ner">Нумын урт</div>
+        \( l = \dfrac{\pi R \alpha}{180^\circ} \qquad \text{эсвэл} \qquad l = R \alpha \)
+        <div class="tailbar">Эхнийх нь α градусаар, хоёр дахь нь α <b>радианаар</b> өгөгдсөн үед</div>
+      </div>
+
+      <div class="tomyo-kart ongo1">
+        <div class="ner">Секторын талбай</div>
+        \( S = \dfrac{\pi R^2 \alpha}{360^\circ} = \dfrac{1}{2} l R \)
+        <div class="tailbar">Радианаар: \( S = \dfrac{1}{2} R^2 \alpha \). Нумын урт нь мэдэгдэж байвал \( \frac{1}{2} l R \) хувилбар нь хамгийн хурдан.</div>
+      </div>
+
+      <div class="tomyo-kart ongo2">
+        <div class="ner">Сегментийн талбай</div>
+        \( S = \dfrac{1}{2} R^2 \left( \alpha - \sin \alpha \right) \)
+        <div class="tailbar">Энд α нь <b>радианаар</b>. Утга нь: сектороос гурвалжныг хассан — \( S_{\text{сегмент}} = S_{\text{сектор}} - S_{\triangle AOB} \)</div>
+      </div>
+
+      <div class="tomyo-kart ongo3 huudas-tögsgöl">
+        <div class="ner">Хөвчийн урт</div>
+        \( AB = 2R \sin \dfrac{\alpha}{2} \)
+        <div class="tailbar">α — хөвчинд тулгуурласан төв өнцөг. Синусын теоремын \( \frac{a}{\sin A} = 2R \) хэлбэртэй шууд холбоотой.</div>
+      </div>
+    </div>
+  </body>
+</html>
