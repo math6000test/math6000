@@ -16,6 +16,17 @@
       .asuult { font-size: 17px; line-height: 1.7; margin-bottom: 12px; }
       .asuult table { display: block; overflow-x: auto; max-width: 100%; white-space: nowrap; }
       .asuult td { font-size: 14px !important; padding: 5px 8px !important; }
+      .asuult mjx-container, .songolt mjx-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+      }
+
+      @media (max-width: 520px) {
+        .bodlogo-kart { padding: 16px 14px; }
+        .asuult { font-size: 15px; }
+        .songolt { font-size: 15px; padding: 10px 12px; }
+      } 
       .zurag { text-align: center; margin: 14px 0; }
       .zurag svg, .zurag img { max-width: 100%; height: auto; }
       .songolt { display: block; width: 100%; text-align: left; background: #f0f4f8; color: #0f2b46; border: 2px solid #f0f4f8; border-radius: 10px; padding: 11px 16px; margin: 7px 0; font-size: 16px; font-family: inherit; cursor: pointer; }
@@ -88,8 +99,8 @@
         {
           dugaar: 3,
           onoo: 1,
-          asuult: "\\( A = \\left\\{\\sqrt7,\\; \\pi,\\; 2.0(1),\\; 0,\\; \\sqrt[5]{3},\\; \\dfrac{11}{7},\\; \\sqrt{16}\\right\\} \\) олонлог өгөгдөв. Энэ олонлогийн бүх элемент нь иррационал тоо байх дэд олонлог аль нь вэ?",
-          songolt: ["\\( \\left\\{\\sqrt5,\\, \\pi,\\, \\sqrt[5]{3},\\, \\frac{11}{7},\\, 2.0(1)\\right\\} \\)", "\\( \\left\\{\\pi,\\, \\sqrt[5]{3},\\, \\sqrt7,\\, \\sqrt{16}\\right\\} \\)", "\\( \\left\\{2.0(1),\\, \\frac{11}{7}\\right\\} \\)", "\\( \\left\\{\\sqrt7,\\, \\pi,\\, \\frac{11}{7}\\right\\} \\)", "\\( \\left\\{\\sqrt7,\\, \\pi,\\, \\sqrt[5]{3}\\right\\} \\)"],
+          asuult: "\\[ A = \\left\\{\\sqrt7,\\; \\pi,\\; 2.0(1),\\; 0, \\right. \\] \\[ \\left. \\sqrt[5]{3},\\; \\tfrac{11}{7},\\; \\sqrt{16}\\right\\} \\] олонлог өгөгдөв. Энэ олонлогийн бүх элемент нь иррационал тоо байх дэд олонлог аль нь вэ?",
+                   songolt: ["\\( \\left\\{\\sqrt5, \\pi, \\sqrt[5]{3}, \\tfrac{11}{7}, 2.0(1)\\right\\} \\)", "\\( \\left\\{\\pi, \\sqrt[5]{3}, \\sqrt7, \\sqrt{16}\\right\\} \\)", "\\( \\left\\{2.0(1), \\tfrac{11}{7}\\right\\} \\)", "\\( \\left\\{\\sqrt7, \\pi, \\tfrac{11}{7}\\right\\} \\)", "\\( \\left\\{\\sqrt7, \\pi, \\sqrt[5]{3}\\right\\} \\)"],
           zov: 4,
           bodolt: "Рационал тоонууд: \\( 2.0(1) \\) (үечилсэн бутархай), \\( 0 \\), \\( \\dfrac{11}{7} \\), \\( \\sqrt{16} = 4 \\). Иррационал нь зөвхөн \\( \\sqrt7,\\; \\pi,\\; \\sqrt[5]{3} \\) гурав. Мөн A хувилбарт байгаа \\( \\sqrt5 \\) нь анхны олонлогт огт байхгүй."
         },
